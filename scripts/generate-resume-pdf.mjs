@@ -83,7 +83,7 @@ const resumeHTML = `<!DOCTYPE html>
 <div class="header">
   <h1>Jason Terry</h1>
   <div class="contact">
-    Livonia, MI 48150 &nbsp;|&nbsp; (313) 753-8592 &nbsp;|&nbsp; jasonericterry@gmail.com &nbsp;|&nbsp; <a href="https://linkedin.com/in/jason-e-terry">linkedin.com/in/jason-e-terry</a>
+    Livonia, MI 48150 &nbsp;|&nbsp; (313) 753-8592 &nbsp;|&nbsp; jason@terryarbors.com &nbsp;|&nbsp; <a href="https://linkedin.com/in/jason-e-terry">linkedin.com/in/jason-e-terry</a> &nbsp;|&nbsp; terryarbors.com
   </div>
 </div>
 

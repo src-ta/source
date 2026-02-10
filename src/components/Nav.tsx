@@ -3,10 +3,10 @@ import { Menu, X, Terminal } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
+  { name: 'Chat', href: '#chat' },
   { name: 'Skills', href: '#skills' },
   { name: 'Projects', href: '#projects' },
   { name: 'About', href: '#about' },
-  { name: 'Chat', href: '#chat' },
   { name: 'Contact', href: '#contact' },
 ];
 
@@ -82,6 +82,13 @@ export const Nav = () => {
             </a>
           ))}
           <a
+            href="/JT_HTB-Academy.pdf"
+            target="_blank"
+            className="px-4 py-2 text-sm font-mono text-bg-deep bg-accent hover:bg-accent-dim transition-colors rounded-sm font-bold mr-2"
+          >
+            HTB Transcript
+          </a>
+          <a
             href="/Jason-Terry-Resume.pdf"
             download
             className="px-4 py-2 text-sm font-mono text-bg-deep bg-primary hover:bg-primary-dim transition-colors rounded-sm font-bold"
@@ -121,9 +128,16 @@ export const Nav = () => {
                 </a>
               ))}
               <a
+                href="/JT_HTB-Academy.pdf"
+                target="_blank"
+                className="mt-4 w-full py-3 text-center font-mono text-bg-deep bg-accent hover:bg-accent-dim transition-colors rounded-sm font-bold"
+              >
+                View HTB Transcript
+              </a>
+              <a
                 href="/Jason-Terry-Resume.pdf"
                 download
-                className="mt-4 w-full py-3 text-center font-mono text-bg-deep bg-primary hover:bg-primary-dim transition-colors rounded-sm font-bold"
+                className="mt-2 w-full py-3 text-center font-mono text-bg-deep bg-primary hover:bg-primary-dim transition-colors rounded-sm font-bold"
               >
                 Download Resume
               </a>

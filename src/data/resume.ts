@@ -1,8 +1,9 @@
 export const profile = {
   name: 'Jason Terry',
+  website: 'terryarbors.com',
   title: 'Security Researcher & Penetration Tester',
   location: 'Livonia, MI',
-  email: 'jasonericterry@gmail.com',
+  email: 'jason@terryarbors.com',
   linkedin: 'https://linkedin.com/in/jason-e-terry',
   tagline: ['Security Researcher', 'Penetration Tester', '20+ Years in Tech', 'HTB Top 1%'],
   subTagline:

@@ -20,7 +20,7 @@ const itemVariants = {
 
 export const Hero = () => {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <div className="relative flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-bg-elevated/20 via-bg-deep to-bg-deep z-0" />
       <div className="absolute inset-0 z-0 opacity-20" 
            style={{ 
@@ -29,52 +29,51 @@ export const Hero = () => {
            }} 
       />
       
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="flex items-center gap-2 mb-6"
-          >
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-mono">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-              </span>
-              Available for Hire
+      <div className="relative z-10 w-full">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="flex items-center gap-2 mb-6"
+        >
+          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-mono">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
             </span>
-          </motion.div>
+            Available for Hire
+          </span>
+        </motion.div>
 
-          <motion.h1 
-            className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <span className="block text-text-primary mb-2">Jason Terry</span>
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-dim to-accent">
-              {profile.tagline.map((line, i) => (
-                <span key={i} className="block">{line}</span>
-              ))}
-            </span>
-          </motion.h1>
+        <motion.h1 
+          className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <span className="block text-text-primary mb-2">Jason Terry</span>
+          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-dim to-accent">
+            {profile.tagline.map((line, i) => (
+              <span key={i} className="block">{line}</span>
+            ))}
+          </span>
+        </motion.h1>
 
-          <motion.p 
-            className="text-xl md:text-2xl text-text-secondary max-w-2xl mb-10 leading-relaxed"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            {profile.subTagline}
-          </motion.p>
+        <motion.p 
+          className="text-xl md:text-2xl text-text-secondary max-w-2xl mb-10 leading-relaxed"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
+          {profile.subTagline}
+        </motion.p>
 
-          <motion.div 
-            className="flex flex-wrap gap-4 mb-16"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-          >
+        <motion.div 
+          className="flex flex-wrap gap-4 mb-16"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
             <motion.a 
               href="#projects"
               variants={itemVariants}
@@ -110,8 +109,7 @@ export const Hero = () => {
               </motion.div>
             ))}
           </motion.div>
-        </div>
       </div>
-    </section>
+    </div>
   );
 };

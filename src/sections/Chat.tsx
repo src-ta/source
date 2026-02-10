@@ -22,6 +22,19 @@ function matchResponse(input: string) {
   let bestMatch = defaultChatResponse;
   let bestScore = 0;
 
+  // Prioritize contact patterns first
+  const contactPattern = chatResponses.find(entry => 
+    entry.patterns.includes('contact')
+  );
+  
+  if (contactPattern && tokens.some(token => 
+    ['contact', 'email', 'reach', 'call', 'talk', 'meet', 'schedule', 'available'].some(keyword => 
+      token.includes(keyword)
+    )
+  )) {
+    return contactPattern;
+  }
+
   for (const entry of chatResponses) {
     let score = 0;
     for (const token of tokens) {
@@ -124,19 +137,17 @@ export const Chat = () => {
   };
 
   return (
-    <section id="chat" className="py-24 bg-bg-deep relative">
-      <div className="container mx-auto px-6 max-w-3xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <div className="flex items-center gap-2 mb-10 text-primary font-mono text-lg">
-            <span className="text-accent">$</span> ./ask-jason --interactive
-            <span className="w-2 h-5 bg-primary animate-pulse ml-1" />
-          </div>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+    >
+      <div className="flex items-center gap-2 mb-10 text-primary font-mono text-lg">
+        <span className="text-accent">$</span> ./ask-jason --interactive
+        <span className="w-2 h-5 bg-primary animate-pulse ml-1" />
+      </div>
 
-          <div className="bg-bg-card border border-border rounded-sm overflow-hidden">
+      <div className="bg-bg-card border border-border rounded-sm overflow-hidden">
             <div className="bg-bg-elevated px-4 py-2.5 border-b border-border flex items-center gap-2">
               <div className="flex gap-1.5">
                 <span className="w-3 h-3 rounded-full bg-danger/60" />
@@ -233,8 +244,6 @@ export const Chat = () => {
               </form>
             </div>
           </div>
-        </motion.div>
-      </div>
-    </section>
+    </motion.div>
   );
 };
