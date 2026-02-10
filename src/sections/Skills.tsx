@@ -21,9 +21,9 @@ const SkillBar = ({ skill, index }: { skill: Skill; index: number }) => (
     <div className="h-2 bg-bg-deep rounded-full overflow-hidden">
       <motion.div
         className="h-full rounded-full bg-gradient-to-r from-primary/80 to-primary"
-        initial={{ width: 0 }}
+        initial={{ width: "0%" }}
         whileInView={{ width: `${skill.level}%` }}
-        viewport={{ once: true }}
+        viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8, delay: index * 0.05, ease: 'easeOut' }}
       />
     </div>
