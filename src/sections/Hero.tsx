@@ -20,7 +20,7 @@ const itemVariants = {
 
 export const Hero = () => {
   return (
-    <div className="relative flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-bg-elevated/20 via-bg-deep to-bg-deep z-0" />
       <div className="absolute inset-0 z-0 opacity-20" 
            style={{ 
@@ -29,7 +29,7 @@ export const Hero = () => {
            }} 
       />
       
-      <div className="relative z-10 w-full">
+      <div className="container mx-auto px-6 max-w-7xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -110,6 +110,6 @@ export const Hero = () => {
             ))}
           </motion.div>
       </div>
-    </div>
+    </section>
   );
 };

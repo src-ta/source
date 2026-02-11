@@ -12,17 +12,11 @@ function App() {
     <>
       <Nav />
       <main>
-        <section className="py-24 bg-bg-deep">
-          <div className="container mx-auto px-6">
-            <div className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
-              <Hero />
-              <Chat />
-            </div>
-          </div>
-        </section>
+        <Hero />
         <Skills />
         <Projects />
         <About />
+        <Chat />
         <Contact />
       </main>
       <Footer />
