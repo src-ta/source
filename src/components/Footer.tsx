@@ -54,6 +54,9 @@ export const Footer = () => {
           <p className="text-[10px] text-text-muted/50 font-mono mt-1">
             Last Updated: 2-9-2026
           </p>
+          <p className="text-[10px] text-text-muted/30 font-mono mt-2 italic">
+            "It's not a deficit of attention, it's an abundance of curiosity."
+          </p>
         </div>
       </div>
     </footer>
