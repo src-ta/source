@@ -3,10 +3,10 @@ import { Menu, X, Terminal } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
-  { name: 'Chat', href: '#chat' },
   { name: 'Skills', href: '#skills' },
   { name: 'Projects', href: '#projects' },
   { name: 'About', href: '#about' },
+  { name: 'Chat', href: '#chat' },
   { name: 'Contact', href: '#contact' },
 ];
 
