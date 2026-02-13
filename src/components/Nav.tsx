@@ -53,18 +53,26 @@ export const Nav = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-bg-deep/80 backdrop-blur-md border-b border-border' : 'bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled 
+          ? 'bg-bg-deep/80 backdrop-blur-md border-b border-border shadow-[0_0_20px_rgba(0,0,0,0.5)]' 
+          : 'bg-transparent backdrop-blur-[2px]'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <a 
           href="#" 
           onClick={(e) => handleLinkClick(e, '#hero')}
-          className="flex items-center gap-2 font-mono text-xl font-bold text-primary hover:text-primary-dim transition-colors"
+          className="group flex items-center gap-2 font-mono text-xl font-bold text-primary hover:text-primary-dim transition-colors"
         >
-          <Terminal className="w-6 h-6" />
-          <span>JT</span>
+          <div className="relative">
+            <Terminal className="w-6 h-6 group-hover:text-accent transition-colors duration-300" />
+            <span className="absolute -inset-2 bg-primary/20 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+          </div>
+          <span className="relative">
+            JT
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
+          </span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">
@@ -73,25 +81,30 @@ export const Nav = () => {
               key={link.name}
               href={link.href}
               onClick={(e) => handleLinkClick(e, link.href)}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
-                activeSection === link.href.substring(1) ? 'text-primary' : 'text-text-secondary'
-              }`}
+              className="relative group py-2"
             >
-              <span className="text-primary mr-1">0{navLinks.indexOf(link) + 1}.</span>
-              {link.name}
+              <span className={`text-sm font-medium transition-colors duration-300 ${
+                activeSection === link.href.substring(1) ? 'text-primary' : 'text-text-secondary group-hover:text-primary'
+              }`}>
+                <span className="text-primary/70 mr-1 font-mono text-xs">0{navLinks.indexOf(link) + 1}.</span>
+                {link.name}
+              </span>
+              <span className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-primary to-accent transition-all duration-300 ${
+                activeSection === link.href.substring(1) ? 'w-full opacity-100 shadow-[0_0_8px_var(--color-primary)]' : 'w-0 opacity-0 group-hover:w-1/2 group-hover:opacity-50'
+              }`} />
             </a>
           ))}
           <a
             href="/JT_HTB-Academy.pdf"
             target="_blank"
-            className="px-4 py-2 text-sm font-mono text-bg-deep bg-accent hover:bg-accent-dim transition-colors rounded-sm font-bold mr-2"
+            className="px-4 py-2 text-sm font-mono text-bg-deep bg-accent hover:bg-accent-dim transition-all duration-300 rounded-sm font-bold mr-2 hover:shadow-[0_0_15px_rgba(0,212,255,0.4)] hover:-translate-y-0.5"
           >
             HTB Transcript
           </a>
           <a
             href="/Jason-Terry-Resume.pdf"
             download
-            className="px-4 py-2 text-sm font-mono text-bg-deep bg-primary hover:bg-primary-dim transition-colors rounded-sm font-bold"
+            className="px-4 py-2 text-sm font-mono text-bg-deep bg-primary hover:bg-primary-dim transition-all duration-300 rounded-sm font-bold hover:shadow-[0_0_15px_rgba(245,158,11,0.4)] hover:-translate-y-0.5"
           >
             Resume
           </a>

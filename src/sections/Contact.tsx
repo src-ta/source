@@ -35,8 +35,11 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-bg-surface relative">
-      <div className="container mx-auto px-6 max-w-5xl">
+    <section id="contact" className="py-24 bg-bg-surface relative overflow-hidden">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/3 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="container mx-auto px-6 max-w-5xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -49,9 +52,14 @@ export const Contact = () => {
 
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold text-text-primary mb-4">
+              <motion.h2
+                className="text-3xl font-bold text-text-primary mb-4"
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
                 Let&apos;s Talk Security
-              </h2>
+              </motion.h2>
               <p className="text-text-secondary mb-8 leading-relaxed">
                 Actively seeking penetration testing and red team roles.
                 Available for full-time positions, contract engagements, and
@@ -59,68 +67,85 @@ export const Contact = () => {
               </p>
 
               <div className="space-y-4 mb-10">
-                <a
+                <motion.a
                   href={`mailto:${profile.email}`}
-                  className="flex items-center gap-3 p-4 bg-bg-card border border-border rounded-sm hover:border-primary/30 transition-colors group"
+                  className="flex items-center gap-3 p-4 bg-bg-card border border-border rounded-sm hover:border-primary/30 transition-all duration-300 group hover:shadow-[0_0_20px_rgba(245,158,11,0.08)]"
+                  whileHover={{ x: 4 }}
                 >
-                  <Mail className="w-5 h-5 text-primary" />
+                  <div className="w-10 h-10 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:shadow-[0_0_12px_rgba(245,158,11,0.2)] transition-shadow">
+                    <Mail className="w-5 h-5 text-primary" />
+                  </div>
                   <div>
                     <p className="text-sm text-text-muted">Email</p>
                     <p className="text-text-primary group-hover:text-primary transition-colors">
                       {profile.email}
                     </p>
                   </div>
-                </a>
-                <a
+                </motion.a>
+                <motion.a
                   href={profile.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-4 bg-bg-card border border-border rounded-sm hover:border-accent/30 transition-colors group"
+                  className="flex items-center gap-3 p-4 bg-bg-card border border-border rounded-sm hover:border-accent/30 transition-all duration-300 group hover:shadow-[0_0_20px_rgba(0,212,255,0.08)]"
+                  whileHover={{ x: 4 }}
                 >
-                  <Linkedin className="w-5 h-5 text-accent" />
+                  <div className="w-10 h-10 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center group-hover:shadow-[0_0_12px_rgba(0,212,255,0.2)] transition-shadow">
+                    <Linkedin className="w-5 h-5 text-accent" />
+                  </div>
                   <div>
                     <p className="text-sm text-text-muted">LinkedIn</p>
                     <p className="text-text-primary group-hover:text-accent transition-colors">
                       linkedin.com/in/jason-e-terry
                     </p>
                   </div>
-                </a>
+                </motion.a>
               </div>
 
               <div className="flex flex-wrap gap-3">
-                <a
+                <motion.a
                   href="/Jason-Terry-Resume.pdf"
                   download
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-bg-deep font-bold rounded-sm hover:bg-primary-dim transition-colors text-sm"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-primary to-primary-dim text-bg-deep font-bold rounded-sm hover:shadow-[0_0_20px_rgba(245,158,11,0.3)] transition-shadow text-sm"
                 >
                   <Download className="w-4 h-4" />
                   Download Resume
-                </a>
+                </motion.a>
               </div>
 
-              <div className="mt-10 p-5 bg-bg-card border border-border rounded-sm">
-                <div className="flex items-center gap-2 mb-4">
-                  <GraduationCap className="w-4 h-4 text-accent" />
-                  <h3 className="text-sm font-mono text-text-muted uppercase tracking-wider">
-                    Education
-                  </h3>
+              <motion.div
+                className="mt-10 p-5 bg-bg-card rounded-sm relative overflow-hidden"
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                <div className="absolute inset-0 rounded-sm border border-border" />
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-accent/40 via-transparent to-accent/40" />
+                <div className="relative z-10">
+                  <div className="flex items-center gap-2 mb-4">
+                    <GraduationCap className="w-4 h-4 text-accent" />
+                    <h3 className="text-sm font-mono text-text-muted uppercase tracking-wider">
+                      Education
+                    </h3>
+                  </div>
+                  <p className="text-text-primary font-medium">
+                    {education.degree}
+                  </p>
+                  <p className="text-sm text-text-secondary">
+                    {education.focus} — GPA <span className="text-primary font-mono font-bold">{education.gpa}</span>
+                  </p>
+                  <p className="text-sm text-text-muted">
+                    {education.school}, {education.location} (<span className="text-accent">{education.status}</span>)
+                  </p>
                 </div>
-                <p className="text-text-primary font-medium">
-                  {education.degree}
-                </p>
-                <p className="text-sm text-text-secondary">
-                  {education.focus} — GPA {education.gpa}
-                </p>
-                <p className="text-sm text-text-muted">
-                  {education.school}, {education.location} ({education.status})
-                </p>
-              </div>
+              </motion.div>
             </div>
 
             <div className="space-y-8">
               <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <label className="block text-sm text-text-muted mb-1.5 font-mono">
+                <div className="group">
+                  <label className="block text-sm text-text-muted mb-1.5 font-mono group-focus-within:text-primary transition-colors">
                     name
                   </label>
                   <input
@@ -128,12 +153,12 @@ export const Contact = () => {
                     required
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full bg-bg-card border border-border rounded-sm px-4 py-2.5 text-text-primary outline-none focus:border-primary/50 transition-colors text-sm"
+                    className="w-full bg-bg-card border border-border rounded-sm px-4 py-2.5 text-text-primary outline-none focus:border-primary/50 focus:shadow-[0_0_12px_rgba(245,158,11,0.08)] transition-all duration-300 text-sm"
                     placeholder="Your name"
                   />
                 </div>
-                <div>
-                  <label className="block text-sm text-text-muted mb-1.5 font-mono">
+                <div className="group">
+                  <label className="block text-sm text-text-muted mb-1.5 font-mono group-focus-within:text-primary transition-colors">
                     email
                   </label>
                   <input
@@ -141,12 +166,12 @@ export const Contact = () => {
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full bg-bg-card border border-border rounded-sm px-4 py-2.5 text-text-primary outline-none focus:border-primary/50 transition-colors text-sm"
+                    className="w-full bg-bg-card border border-border rounded-sm px-4 py-2.5 text-text-primary outline-none focus:border-primary/50 focus:shadow-[0_0_12px_rgba(245,158,11,0.08)] transition-all duration-300 text-sm"
                     placeholder="your@email.com"
                   />
                 </div>
-                <div>
-                  <label className="block text-sm text-text-muted mb-1.5 font-mono">
+                <div className="group">
+                  <label className="block text-sm text-text-muted mb-1.5 font-mono group-focus-within:text-primary transition-colors">
                     message
                   </label>
                   <textarea
@@ -154,19 +179,27 @@ export const Contact = () => {
                     rows={5}
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    className="w-full bg-bg-card border border-border rounded-sm px-4 py-2.5 text-text-primary outline-none focus:border-primary/50 transition-colors text-sm resize-none"
+                    className="w-full bg-bg-card border border-border rounded-sm px-4 py-2.5 text-text-primary outline-none focus:border-primary/50 focus:shadow-[0_0_12px_rgba(245,158,11,0.08)] transition-all duration-300 text-sm resize-none"
                     placeholder="Tell me about the opportunity..."
                   />
                 </div>
-                <button
+                <motion.button
                   type="submit"
-                  className="w-full py-3 bg-primary text-bg-deep font-bold rounded-sm hover:bg-primary-dim transition-colors text-sm"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full py-3 bg-gradient-to-r from-primary to-primary-dim text-bg-deep font-bold rounded-sm hover:shadow-[0_0_20px_rgba(245,158,11,0.3)] transition-shadow text-sm"
                 >
                   Send Message
-                </button>
+                </motion.button>
               </form>
 
-              <div className="p-5 bg-bg-card border border-border rounded-sm">
+              <motion.div
+                className="p-5 bg-bg-card border border-border rounded-sm relative overflow-hidden"
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-primary/40 via-transparent to-primary/40" />
                 <div className="flex items-center gap-2 mb-4">
                   <Award className="w-4 h-4 text-primary" />
                   <h3 className="text-sm font-mono text-text-muted uppercase tracking-wider">
@@ -174,30 +207,40 @@ export const Contact = () => {
                   </h3>
                 </div>
                 <div className="space-y-2.5">
-                  {certifications.map((cert) => {
+                  {certifications.map((cert, i) => {
                     const config = certStatusConfig[cert.status];
                     const Icon = config.icon;
                     return (
-                      <div
+                      <motion.div
                         key={cert.name}
-                        className="flex items-center justify-between"
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: i * 0.05 }}
+                        className="flex items-center justify-between group/cert hover:bg-bg-elevated/30 rounded px-1 -mx-1 py-0.5 transition-colors"
                       >
                         <div className="flex items-center gap-2">
-                          <Icon className={`w-3.5 h-3.5 ${config.color}`} />
-                          <span className="text-sm text-text-primary font-medium">
+                          <Icon className={`w-3.5 h-3.5 ${config.color} ${cert.status === 'in-progress' ? 'animate-pulse' : ''}`} />
+                          <span className="text-sm text-text-primary font-medium group-hover/cert:text-primary transition-colors">
                             {cert.name}
                           </span>
                         </div>
                         <span className="text-xs text-text-muted font-mono">
                           {cert.issuer}
                         </span>
-                      </div>
+                      </motion.div>
                     );
                   })}
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="p-5 bg-bg-card border border-border rounded-sm">
+              <motion.div
+                className="p-5 bg-bg-card border border-border rounded-sm relative overflow-hidden"
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-accent/40 via-transparent to-accent/40" />
                 <div className="flex items-center gap-2 mb-4">
                   <Target className="w-4 h-4 text-accent" />
                   <h3 className="text-sm font-mono text-text-muted uppercase tracking-wider">
@@ -205,30 +248,37 @@ export const Contact = () => {
                   </h3>
                 </div>
                 <div className="space-y-3">
-                  {training.map((t: TrainingPlatform) => (
-                    <div key={t.name} className="flex items-start justify-between gap-4">
+                  {training.map((t: TrainingPlatform, i: number) => (
+                    <motion.div
+                      key={t.name}
+                      initial={{ opacity: 0, x: -10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.05 }}
+                      className="flex items-start justify-between gap-4 group/train hover:bg-bg-elevated/30 rounded px-1 -mx-1 py-1 transition-colors"
+                    >
                       <div>
-                        <p className="text-sm text-text-primary font-medium">
+                        <p className="text-sm text-text-primary font-medium group-hover/train:text-accent transition-colors">
                           {t.name}
                         </p>
                         <p className="text-xs text-text-muted">{t.detail}</p>
                       </div>
-                      <span className="shrink-0 text-sm font-mono text-primary font-bold">
+                      <span className="shrink-0 text-sm font-mono text-primary font-bold bg-primary/5 px-2 py-0.5 rounded border border-primary/10">
                         {t.achievement}
                       </span>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
                 <a
                   href="/JT_HTB-Academy.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-4 inline-flex items-center gap-2 text-xs font-mono text-accent hover:text-primary transition-colors"
+                  className="mt-4 inline-flex items-center gap-2 text-xs font-mono text-accent hover:text-primary hover:translate-x-1 transition-all duration-200"
                 >
                   <Download className="w-3.5 h-3.5" />
                   View HTB Academy Transcript
                 </a>
-              </div>
+              </motion.div>
             </div>
           </div>
         </motion.div>
