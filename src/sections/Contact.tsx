@@ -5,7 +5,6 @@ import type { Certification, TrainingPlatform } from '../data/resume';
 import {
   Mail,
   Linkedin,
-  Download,
   CheckCircle,
   Clock,
   Target,
@@ -31,7 +30,7 @@ export const Contact = () => {
     e.preventDefault();
     const subject = encodeURIComponent(`Inquiry from ${name}`);
     const body = encodeURIComponent(`From: ${name}\nEmail: ${email}\n\n${message}`);
-    window.location.href = `mailto:jason@terryarbors.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -46,7 +45,7 @@ export const Contact = () => {
           viewport={{ once: true }}
         >
           <div className="flex items-center gap-2 mb-10 text-primary font-mono text-lg">
-            <span className="text-accent">$</span> ping jason@terry
+            <span className="text-accent">$</span> ping terry@arbors
             <span className="w-2 h-5 bg-primary animate-pulse ml-1" />
           </div>
 
@@ -95,7 +94,7 @@ export const Contact = () => {
                   <div>
                     <p className="text-sm text-text-muted">LinkedIn</p>
                     <p className="text-text-primary group-hover:text-accent transition-colors">
-                      linkedin.com/in/jason-e-terry
+                      linkedin.com/in/terryarbors
                     </p>
                   </div>
                 </motion.a>
@@ -103,14 +102,12 @@ export const Contact = () => {
 
               <div className="flex flex-wrap gap-3">
                 <motion.a
-                  href="/Jason-Terry-Resume.pdf"
-                  download
+                  href="#chat"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-primary to-primary-dim text-bg-deep font-bold rounded-sm hover:shadow-[0_0_20px_rgba(245,158,11,0.3)] transition-shadow text-sm"
                 >
-                  <Download className="w-4 h-4" />
-                  Download Resume
+                  Ask Me Anything
                 </motion.a>
               </div>
 
@@ -136,7 +133,7 @@ export const Contact = () => {
                     {education.focus} — GPA <span className="text-primary font-mono font-bold">{education.gpa}</span>
                   </p>
                   <p className="text-sm text-text-muted">
-                    {education.school}, {education.location} (<span className="text-accent">{education.status}</span>)
+                    {education.school} (<span className="text-accent">{education.status}</span>)
                   </p>
                 </div>
               </motion.div>
@@ -269,15 +266,9 @@ export const Contact = () => {
                     </motion.div>
                   ))}
                 </div>
-                <a
-                  href="/JT_HTB-Academy.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 inline-flex items-center gap-2 text-xs font-mono text-accent hover:text-primary hover:translate-x-1 transition-all duration-200"
-                >
-                  <Download className="w-3.5 h-3.5" />
-                  View HTB Academy Transcript
-                </a>
+                <span className="mt-4 inline-flex items-center gap-2 text-xs font-mono text-accent/60">
+                  Transcript available upon request
+                </span>
               </motion.div>
             </div>
           </div>

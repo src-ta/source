@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Download, Terminal } from 'lucide-react';
+import { ArrowRight, Terminal } from 'lucide-react';
 import { profile } from '../data/resume';
 
 const CountUp = ({ end, duration = 1.2 }: { end: string; duration?: number }) => {
@@ -82,8 +82,8 @@ export const Hero = () => {
             key={i}
             className="absolute text-primary/10 font-mono text-xs whitespace-nowrap"
             initial={{ 
-              x: Math.random() * window.innerWidth, 
-              y: Math.random() * window.innerHeight + window.innerHeight,
+              x: `${Math.random() * 100}vw`, 
+              y: `${100 + Math.random() * 100}vh`,
               opacity: 0 
             }}
             animate={{ 
@@ -135,7 +135,7 @@ export const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className="block text-text-primary mb-3 text-glow drop-shadow-2xl">Jason Terry</span>
+            <span className="block text-text-primary mb-3 text-glow drop-shadow-2xl">Terry Arbors</span>
             <div className="h-[1.2em] relative overflow-hidden">
                <AnimatePresence mode="wait">
                 <motion.span 
@@ -181,15 +181,13 @@ export const Hero = () => {
               </motion.a>
               
               <motion.a 
-                href="/Jason-Terry-Resume.pdf"
-                download
+                href="#contact"
                 variants={itemVariants}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="group inline-flex items-center gap-2 bg-bg-surface/50 backdrop-blur-sm border border-border text-text-primary px-8 py-4 rounded-sm font-medium hover:border-primary/50 hover:bg-bg-elevated hover:text-primary transition-all shadow-lg"
               >
-                <Download className="w-5 h-5" />
-                Download Resume
+                Get In Touch
               </motion.a>
             </motion.div>
         </motion.div>

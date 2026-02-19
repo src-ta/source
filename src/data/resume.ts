@@ -1,13 +1,12 @@
 export const profile = {
-  name: 'Jason Terry',
+  name: 'Terry Arbors',
   website: 'terryarbors.com',
   title: 'Security Researcher & Penetration Tester',
-  location: 'Livonia, MI',
-  email: 'jason@terryarbors.com',
-  linkedin: 'https://linkedin.com/in/jason-e-terry',
+  email: 'contact@terryarbors.com',
+  linkedin: 'https://linkedin.com/in/terryarbors',
   tagline: ['Security Researcher', 'Penetration Tester', '20+ Years in Tech', 'HTB Top 1%'],
   subTagline:
-    'Offensive security operator with enterprise sales experience and a builder\'s mindset.',
+    'Offensive security operator with enterprise experience and a builder\'s mindset.',
   heroStats: [
     { label: 'HTB Academy', value: 'Top 1%' },
     { label: 'HTB Global Rank', value: '#902' },
@@ -18,10 +17,10 @@ export const profile = {
 
 export const summary = {
   short:
-    'Penetration tester and security researcher with 20+ years in technology, including enterprise sales at Microsoft, business operations, and dedicated offensive security training.',
+    'Penetration tester and security researcher with 20+ years in technology, including enterprise sales, business operations, and dedicated offensive security training.',
   long: `I started working with computers at 8 and was programming by 10. By middle school I was deep in security research and tool development. That foundation never left — I built on it through every role since.
 
-I spent over a decade running licensed operations in a heavily regulated industry, managing compliance, physical security, and multi-site infrastructure. I then moved into enterprise technology sales at Microsoft and an MSP where I helped break the company's first $5M annual revenue in 25 years of business.
+I spent over a decade running operations in a heavily regulated industry, managing compliance, physical security, and multi-site infrastructure. I then moved into enterprise technology sales where I helped break a company's first major revenue milestone in over two decades of business.
 
 Now I apply that full range of experience to offensive security — network penetration testing, web/API security, wireless auditing, and physical access assessment. What separates me from a typical candidate is that I understand business risk firsthand. I've carried P&L responsibility, presented to C-suite stakeholders, and navigated regulatory environments. I write reports that drive remediation, not just document findings.`,
   pivotQuestion:
@@ -170,7 +169,7 @@ export const projects: Project[] = [
     ],
     highlights: [
       'Custom BOF exploit chain: fuzzing, EIP control, bad char analysis, shellcode injection',
-      'Automated recon pipeline: asset discovery, subdomain enumeration, Rapid7 Sonar CNAME takeover detection',
+      'Automated recon pipeline: asset discovery, subdomain enumeration, CNAME takeover detection',
       'MITRE ATT&CK tactic classifier and note organizer for structured engagement documentation',
       'Curated 480+ tool arsenal organized by attack phase: enum, exploitation, privesc, persistence, exfil, and C2',
     ],
@@ -207,7 +206,7 @@ export const projects: Project[] = [
       'Pwnagotchi & Bjorn custom wireless recon builds',
       'Wi-Fi and RF reconnaissance with HackRF/ESP32',
       'RFID/NFC physical access research with Proxmark 4',
-      'LoRa mesh networking (LilyGo T-Deck, HELTEC) for off-grid comms',
+      'LoRa mesh networking for off-grid comms',
     ],
     status: 'Ongoing',
   },
@@ -277,60 +276,54 @@ export const training: TrainingPlatform[] = [
 export interface Experience {
   company: string;
   title: string;
-  location: string;
   period: string;
   bullets: string[];
 }
 
 export const experience: Experience[] = [
   {
-    company: 'Knight Watch Inc.',
+    company: 'Sentinel Guard Systems',
     title: 'Account Executive — Physical Security',
-    location: 'Novi, MI',
     period: '2025',
     bullets: [
-      'Consulted on physical security integrations for Corporate, SLED, and NPO clients — surveillance, access control, and emergency response systems.',
+      'Consulted on physical security integrations for corporate, education, and nonprofit clients — surveillance, access control, and emergency response systems.',
       'Assessed on-premises security posture and integrated physical threat identification into enterprise risk frameworks.',
     ],
   },
   {
-    company: 'Apex Digital Solutions',
+    company: 'Meridian IT Solutions',
     title: 'Senior Account Executive',
-    location: 'Southfield, MI',
     period: '2023 – 2024',
     bullets: [
-      'Helped break the company\'s first $5M annual revenue milestone in 25 years of business through outcome-focused IT and cybersecurity sales.',
-      'Built an automated RPA pipeline (Power Platform) that eliminated manual data formatting and cut lead generation time by 40%.',
+      'Helped break the company\'s first major annual revenue milestone through outcome-focused IT and cybersecurity sales.',
+      'Built an automated RPA pipeline that eliminated manual data formatting and cut lead generation time by 40%.',
       'Presented IT and cybersecurity solutions to C-suite stakeholders, aligning technical outcomes with compliance and risk requirements.',
     ],
   },
   {
-    company: 'Microsoft',
+    company: 'Major Cloud Provider',
     title: 'Direct Sales & Success — Education & NPO',
-    location: 'Detroit, MI',
     period: '2022 – 2023',
     bullets: [
-      'Advised enterprise Education and NPO clients on M365 and Azure security, specializing in identity management and GRC alignment.',
+      'Advised enterprise Education and NPO clients on cloud security, specializing in identity management and GRC alignment.',
       'Designed strategic adoption plans that mapped technical security features to regulatory requirements.',
     ],
   },
   {
-    company: 'Blockchain Solutions',
+    company: 'Independent Venture',
     title: 'System Administrator & Founder',
-    location: 'Pinckney, MI',
     period: '2017 – 2022',
     bullets: [
-      'Built and managed a cryptocurrency mining operation (~44 GPUs across 7 rigs), handling networking, power infrastructure, cooling, and remote monitoring.',
+      'Built and managed a distributed compute operation (~44 GPUs across 7 rigs), handling networking, power infrastructure, cooling, and remote monitoring.',
       'Developed custom tooling for real-time device health monitoring, automated alerts, and remote management across distributed hardware.',
     ],
   },
   {
-    company: 'Terry Arbors',
+    company: 'Licensed Operations',
     title: 'Operations Director & Founder',
-    location: 'Pinckney, MI',
     period: '2010 – 2022',
     bullets: [
-      'Founded and operated a licensed agricultural operation under strict regulatory compliance, scaling from startup to national industry recognition.',
+      'Founded and operated a licensed business under strict regulatory compliance, scaling from startup to national industry recognition.',
       'Managed full business operations — licensing, regulatory compliance, facility buildout, supply chain, physical security, and strategic marketing.',
     ],
   },
@@ -339,8 +332,7 @@ export const experience: Experience[] = [
 export const education = {
   degree: 'AAS in Computer Information Systems',
   focus: 'Computer & Network Technology',
-  school: 'Schoolcraft College',
-  location: 'Livonia, MI',
+  school: 'Community College',
   gpa: '3.7',
   status: 'In Progress',
 };
@@ -377,7 +369,7 @@ export const chatResponses: ChatResponse[] = [
       'communicate',
     ],
     response:
-      "My reports are built for two audiences: the technical team that needs to fix the issue, and the executive who needs to fund the fix. Every finding includes a clear business risk statement — not just 'SQL injection found,' but 'Unauthenticated access to customer PII affecting N records, estimated remediation cost vs. breach liability.' I've presented to C-suite stakeholders at Microsoft and MSPs. I know what makes someone approve a budget line item.",
+      "My reports are built for two audiences: the technical team that needs to fix the issue, and the executive who needs to fund the fix. Every finding includes a clear business risk statement — not just 'SQL injection found,' but 'Unauthenticated access to customer PII affecting N records, estimated remediation cost vs. breach liability.' I've presented to C-suite stakeholders at enterprise tech companies. I know what makes someone approve a budget line item.",
     followUp: 'Want to hear about my business background?',
   },
   {
@@ -418,7 +410,7 @@ export const chatResponses: ChatResponse[] = [
       'work history',
     ],
     response:
-      "20+ years in technology. I started building computers and writing code before middle school. I've run businesses in heavily regulated industries, managed distributed infrastructure, worked enterprise sales at Microsoft, and helped an MSP break their first $5M revenue milestone in 25 years. The last 4+ years have been dedicated entirely to offensive security — not as a career change, but as a return to where I started. The business experience is the bonus, not the foundation.",
+      "20+ years in technology. I started building computers and writing code before middle school. I've run businesses in heavily regulated industries, managed distributed infrastructure, worked enterprise sales at a major cloud provider, and helped an MSP break their first major revenue milestone. The last 4+ years have been dedicated entirely to offensive security — not as a career change, but as a return to where I started. The business experience is the bonus, not the foundation.",
     followUp: 'Want to know about my security methodology?',
   },
   {
@@ -455,7 +447,7 @@ export const chatResponses: ChatResponse[] = [
       'call',
     ],
     response:
-      "I'm available immediately for penetration testing, red team, and security consultant roles — full-time or contract. Best way to reach me is jason@terryarbors.com or LinkedIn at linkedin.com/in/jason-e-terry. Scroll down to the contact section to send a message directly.",
+      "I'm available immediately for penetration testing, red team, and security consultant roles — full-time or contract. Best way to reach me is contact@terryarbors.com or LinkedIn at linkedin.com/in/terryarbors. Scroll down to the contact section to send a message directly.",
     followUp: 'Anything else you want to know before reaching out?',
   },
   {

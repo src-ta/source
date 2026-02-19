@@ -70,7 +70,7 @@ export const Nav = () => {
             <span className="absolute -inset-2 bg-primary/20 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
           </div>
           <span className="relative">
-            JT
+            TA
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
           </span>
         </a>
@@ -95,18 +95,10 @@ export const Nav = () => {
             </a>
           ))}
           <a
-            href="/JT_HTB-Academy.pdf"
-            target="_blank"
-            className="px-4 py-2 text-sm font-mono text-bg-deep bg-accent hover:bg-accent-dim transition-all duration-300 rounded-sm font-bold mr-2 hover:shadow-[0_0_15px_rgba(0,212,255,0.4)] hover:-translate-y-0.5"
-          >
-            HTB Transcript
-          </a>
-          <a
-            href="/Jason-Terry-Resume.pdf"
-            download
+            href="#contact"
             className="px-4 py-2 text-sm font-mono text-bg-deep bg-primary hover:bg-primary-dim transition-all duration-300 rounded-sm font-bold hover:shadow-[0_0_15px_rgba(245,158,11,0.4)] hover:-translate-y-0.5"
           >
-            Resume
+            Contact
           </a>
         </div>
 
@@ -141,18 +133,11 @@ export const Nav = () => {
                 </a>
               ))}
               <a
-                href="/JT_HTB-Academy.pdf"
-                target="_blank"
-                className="mt-4 w-full py-3 text-center font-mono text-bg-deep bg-accent hover:bg-accent-dim transition-colors rounded-sm font-bold"
+                href="#contact"
+                onClick={(e) => handleLinkClick(e, '#contact')}
+                className="mt-4 w-full py-3 text-center font-mono text-bg-deep bg-primary hover:bg-primary-dim transition-colors rounded-sm font-bold"
               >
-                View HTB Transcript
-              </a>
-              <a
-                href="/Jason-Terry-Resume.pdf"
-                download
-                className="mt-2 w-full py-3 text-center font-mono text-bg-deep bg-primary hover:bg-primary-dim transition-colors rounded-sm font-bold"
-              >
-                Download Resume
+                Get In Touch
               </a>
             </div>
           </motion.div>

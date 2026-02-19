@@ -70,7 +70,7 @@ export const About = () => {
               <div className="absolute top-0 left-[-5px] w-2.5 h-2.5 rounded-full bg-accent shadow-[0_0_8px_rgba(0,212,255,0.5)]" />
               <div className="space-y-12">
                 {experience.map((job, index) => {
-                  const isPivot = job.company === 'Microsoft';
+                  const isPivot = job.company === 'Major Cloud Provider';
                   return (
                     <motion.div 
                       key={index}
@@ -112,7 +112,6 @@ export const About = () => {
                           )}
                         </h3>
                         <p className="text-text-secondary font-medium">{job.title}</p>
-                        <p className="text-text-muted text-sm mt-2">{job.location}</p>
                         
                         <ul className="mt-4 space-y-2">
                           {job.bullets.map((bullet, i) => (

@@ -145,7 +145,7 @@ export const Chat = () => {
           viewport={{ once: true }}
         >
           <div className="flex items-center gap-2 mb-10 text-primary font-mono text-lg">
-            <span className="text-accent">$</span> ./ask-jason --interactive
+            <span className="text-accent">$</span> ./ask-terry --interactive
             <span className="w-2 h-5 bg-primary animate-pulse ml-1" />
           </div>
 
@@ -164,7 +164,7 @@ export const Chat = () => {
                 <span className="w-3 h-3 rounded-full bg-primary/60 hover:bg-primary transition-colors cursor-default" />
               </div>
               <span className="text-xs font-mono text-text-muted ml-2">
-                jason-assistant v1.0 — interactive mode
+                terry-assistant v1.0 — interactive mode
               </span>
               <span className="ml-auto text-xs font-mono text-primary/40 animate-pulse">LIVE</span>
             </div>
