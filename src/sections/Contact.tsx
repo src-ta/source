@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { profile, education, certifications, training } from '../data/resume';
+import { profile, certifications, training } from '../data/resume';
 import type { Certification, TrainingPlatform } from '../data/resume';
 import {
   Mail,
@@ -11,7 +11,6 @@ import {
   Clock,
   Target,
   Award,
-  GraduationCap,
 } from 'lucide-react';
 
 const certStatusConfig: Record<
@@ -147,32 +146,7 @@ export const Contact = () => {
                 </motion.a>
               </div>
 
-              <motion.div
-                className="mt-10 p-5 bg-bg-card rounded-sm relative overflow-hidden"
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-              >
-                <div className="absolute inset-0 rounded-sm border border-border" />
-                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-accent/40 via-transparent to-accent/40" />
-                <div className="relative z-10">
-                  <div className="flex items-center gap-2 mb-4">
-                    <GraduationCap className="w-4 h-4 text-accent" />
-                    <h3 className="text-sm font-mono text-text-muted uppercase tracking-wider">
-                      Education
-                    </h3>
-                  </div>
-                  <p className="text-text-primary font-medium">
-                    {education.degree}
-                  </p>
-                  <p className="text-sm text-text-secondary">
-                    {education.focus} — GPA <span className="text-primary font-mono font-bold">{education.gpa}</span>
-                  </p>
-                  <p className="text-sm text-text-muted">
-                    {education.school} (<span className="text-accent">{education.status}</span>)
-                  </p>
-                </div>
-              </motion.div>
+
             </div>
 
             <div className="space-y-8">

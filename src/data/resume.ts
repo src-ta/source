@@ -136,6 +136,34 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: 'DE-VoidLink',
+    subtitle: 'Adversary Simulation Framework',
+    description:
+      'Replicated the VoidLink agentic malware framework from published threat intelligence for detection engineering research. Published 10 YARA rules, 7 Sigma rules, and Suricata detection signatures.',
+    tech: ['Zig', 'Go', 'C', 'YARA', 'Sigma', 'Suricata'],
+    highlights: [
+      'Zig beacon with direct syscall fingerprinting',
+      'Go C2 server with AES-256-GCM encrypted protocol',
+      '5 HTTP traffic camouflage modes',
+      'Published detection rules validated against Aegis IDS',
+    ],
+    status: 'Active Development',
+  },
+  {
+    title: 'Aegis',
+    subtitle: 'Behavioral IDS for Agentic Threats',
+    description:
+      'Detects LLM-driven attacks via cadence analysis and inter-arrival time fingerprinting. 7 detection rules, 9 LLM model profiles, 125 tests.',
+    tech: ['Python', 'eBPF', 'Machine Learning', 'Behavioral Analysis'],
+    highlights: [
+      'Inter-arrival time fingerprinting for LLM detection',
+      '9 known LLM model behavioral profiles',
+      '7 behavioral detection rules (AEGIS-001 through AEGIS-007)',
+      '125 tests passing with full coverage',
+    ],
+    status: 'Active Development',
+  },
+  {
     title: 'Custom Security Operations Platform',
     subtitle: 'Full-Stack Offensive Testing Framework',
     description:
@@ -157,31 +185,29 @@ export const projects: Project[] = [
     status: 'Active Development',
   },
   {
-    title: 'Offensive Tooling & Engagement Infrastructure',
-    subtitle: 'Custom Scripts, Exploit Dev & Deployment Pipeline',
+    title: 'eBPF Security Sensors',
+    subtitle: 'Kernel-Level Telemetry Collection',
     description:
-      'A comprehensive engagement toolkit covering every phase of an assessment — from automated recon pipelines and NTLM credential attacks to buffer overflow exploit development and organized payload staging. Includes custom MITRE ATT&CK classification tooling for mapping findings to tactics during reporting.',
+      'High-performance eBPF-based security sensors for real-time kernel event collection. Captures process execution, file access, network connections, and privilege escalation attempts with minimal overhead.',
     tech: [
+      'C',
+      'eBPF',
       'Python',
-      'Bash',
-      'PowerShell',
-      'C/C++',
-      'Flask',
-      'Node.js',
+      'Linux Kernel',
     ],
     highlights: [
-      'Custom BOF exploit chain: fuzzing, EIP control, bad char analysis, shellcode injection',
-      'Automated recon pipeline: asset discovery, subdomain enumeration, CNAME takeover detection',
-      'MITRE ATT&CK tactic classifier and note organizer for structured engagement documentation',
-      'Curated 480+ tool arsenal organized by attack phase: enum, exploitation, privesc, persistence, exfil, and C2',
+      'Real-time process, file, and network event capture',
+      'Privilege escalation and credential access detection',
+      'Minimal kernel overhead via eBPF ring buffers',
+      'Feeds directly into Aegis behavioral detection pipeline',
     ],
-    status: 'Ongoing',
+    status: 'Active Development',
   },
   {
     title: 'AI Security Research Lab',
-    subtitle: 'LLM Red Team Assessment Pipeline',
+    subtitle: 'TCM Security AI Hacking Coursework',
     description:
-      'Purpose-built AI/LLM security testing environment on repurposed GPU compute. Built a 5-tool assessment pipeline covering prompt injection testing, LLM-as-judge classification, determinism probing, rate limit analysis, and RAG data poisoning detection — integrated with industry frameworks like Garak, PyRIT, and the Adversarial Robustness Toolbox.',
+      '5-tool LLM assessment pipeline built during TCM Security AI Hacking coursework. Covers prompt injection testing, LLM-as-judge classification, determinism probing, rate limit analysis, and RAG data poisoning detection — integrated with Garak, PyRIT, and the Adversarial Robustness Toolbox.',
     tech: ['Python', 'Ollama', 'CUDA', 'Proxmox', 'Flask', 'REST API'],
     highlights: [
       'Custom prompt injection tester with CSV attack libraries and rate-limited concurrent delivery',
@@ -264,14 +290,9 @@ export const training: TrainingPlatform[] = [
     detail: 'Top 1,000 in competitive machine exploitation',
   },
   {
-    name: 'HackTheBox Seasons',
-    achievement: 'Bronze Tier',
-    detail: 'Time-constrained seasonal challenges',
-  },
-  {
-    name: 'TryHackMe',
-    achievement: 'Top 5%',
-    detail: 'Global rank in practical security training',
+    name: 'TCM Security',
+    achievement: 'CE Credits',
+    detail: 'Python for Hackers, AI Hacking (built 5-tool LLM pipeline), Web/API Hacking & Bug Bounty, Phishing Campaigns',
   },
 ];
 
@@ -284,49 +305,39 @@ export interface Experience {
 
 export const experience: Experience[] = [
   {
-    company: 'Sentinel Guard Systems',
-    title: 'Account Executive — Physical Security',
+    company: 'Knight Watch Inc.',
+    title: 'Account Executive',
     period: '2025',
     bullets: [
-      'Consulted on physical security integrations for corporate, education, and nonprofit clients — surveillance, access control, and emergency response systems.',
+      'Consulted on physical security integrations for Corporate, SLED, and NPO clients — surveillance, access control, and emergency response systems.',
       'Assessed on-premises security posture and integrated physical threat identification into enterprise risk frameworks.',
     ],
   },
   {
-    company: 'Meridian IT Solutions',
+    company: 'Apex Digital Solutions',
     title: 'Senior Account Executive',
     period: '2023 – 2024',
     bullets: [
-      'Helped break the company\'s first major annual revenue milestone through outcome-focused IT and cybersecurity sales.',
-      'Built an automated RPA pipeline that eliminated manual data formatting and cut lead generation time by 40%.',
+      'Helped break the company\'s first $5M annual revenue milestone in 25 years through outcome-focused IT and cybersecurity sales.',
+      'Built an automated RPA pipeline (Power Platform) that cut lead generation time by 40%.',
       'Presented IT and cybersecurity solutions to C-suite stakeholders, aligning technical outcomes with compliance and risk requirements.',
     ],
   },
   {
-    company: 'Major Cloud Provider',
+    company: 'Microsoft',
     title: 'Direct Sales & Success — Education & NPO',
     period: '2022 – 2023',
     bullets: [
-      'Advised enterprise Education and NPO clients on cloud security, specializing in identity management and GRC alignment.',
+      'Advised enterprise Education and NPO clients on M365 and Azure security, specializing in identity management and GRC alignment.',
       'Designed strategic adoption plans that mapped technical security features to regulatory requirements.',
     ],
   },
   {
-    company: 'Independent Venture',
+    company: 'Blockchain Solutions',
     title: 'System Administrator & Founder',
     period: '2017 – 2022',
     bullets: [
-      'Built and managed a distributed compute operation (~44 GPUs across 7 rigs), handling networking, power infrastructure, cooling, and remote monitoring.',
-      'Developed custom tooling for real-time device health monitoring, automated alerts, and remote management across distributed hardware.',
-    ],
-  },
-  {
-    company: 'Licensed Operations',
-    title: 'Operations Director & Founder',
-    period: '2010 – 2022',
-    bullets: [
-      'Founded and operated a licensed business under strict regulatory compliance, scaling from startup to national industry recognition.',
-      'Managed full business operations — licensing, regulatory compliance, facility buildout, supply chain, physical security, and strategic marketing.',
+      'Built and managed distributed compute infrastructure (~44 GPUs, 7 rigs) with custom monitoring tooling, automated alerts, and remote management.',
     ],
   },
 ];
@@ -334,7 +345,7 @@ export const experience: Experience[] = [
 export const education = {
   degree: 'AAS in Computer Information Systems',
   focus: 'Computer & Network Technology',
-  school: 'Community College',
+  school: 'Schoolcraft College, Livonia, MI',
   gpa: '3.7',
   status: 'In Progress',
 };
@@ -412,7 +423,7 @@ export const chatResponses: ChatResponse[] = [
       'work history',
     ],
     response:
-      "20+ years in technology. I started building computers and writing code before middle school. I've run businesses in heavily regulated industries, managed distributed infrastructure, worked enterprise sales at a major cloud provider, and helped an MSP break their first major revenue milestone. The last 4+ years have been dedicated entirely to offensive security — not as a career change, but as a return to where I started. The business experience is the bonus, not the foundation.",
+      "20+ years in technology. I started building computers and writing code before middle school. I've run businesses in heavily regulated industries, managed distributed infrastructure, worked enterprise sales at Microsoft, and helped an MSP break their first $5M revenue milestone in 25 years. The last 4+ years have been dedicated entirely to offensive security — not as a career change, but as a return to where I started. The business experience is the bonus, not the foundation.",
     followUp: 'Want to know about my security methodology?',
   },
   {
@@ -427,7 +438,7 @@ export const chatResponses: ChatResponse[] = [
       'script',
     ],
     response:
-      "I build tools because I want to understand the full attack chain, not just run someone else's scripts. My main project is a custom security operations platform — 49+ API endpoints, Burp Suite integration, real-time orchestration — built because existing tools don't match my workflow. Beyond that, I maintain a full engagement infrastructure: automated recon pipelines that chain asset discovery through subdomain takeover detection, custom buffer overflow exploit tooling for x86 targets, NTLM credential attack scripts, a MITRE ATT&CK tactic classifier I wrote for mapping findings during reporting, and a curated deployment toolkit organized by platform and attack phase. I also maintain an AI adversarial research lab and custom wireless recon platforms.",
+      "I build tools because I want to understand the full attack chain, not just run someone else's scripts. My main project is a custom security operations platform — 49+ API endpoints, Burp Suite integration, real-time orchestration — built because existing tools don't match my workflow. Beyond that, I maintain a full engagement infrastructure: automated recon pipelines that chain asset discovery through subdomain takeover detection, custom buffer overflow exploit tooling for x86 targets, NTLM credential attack scripts, a MITRE ATT&CK tactic classifier I wrote for mapping findings during reporting, and a curated deployment toolkit organized by platform and attack phase. My flagship projects are DE-VoidLink — a full adversary simulation framework I built in Zig, Go, and C from real threat intelligence — and Aegis, a behavioral IDS that detects LLM-driven attacks. I also maintain an AI adversarial research lab and custom wireless recon platforms.",
     followUp: 'Want to know about my hardware capabilities?',
   },
   {
@@ -455,7 +466,7 @@ export const chatResponses: ChatResponse[] = [
   {
     patterns: ['ai', 'llm', 'machine learning', 'ml', 'artificial intelligence', 'prompt'],
     response:
-      "AI/LLM security is an active research area for me. I've built a 5-tool assessment pipeline on dedicated GPU hardware: a prompt injection tester that fires structured attack libraries at chat endpoints with rate limiting and repeat testing, an LLM-as-judge classifier that uses a local model to score injection success with confidence metrics, a temperature probe for detecting non-determinism, a rate limit threshold finder, and a RAG canary system for detecting knowledge base data extraction. I also work with industry tools like Garak, PyRIT, and the Adversarial Robustness Toolbox, and I maintain organized prompt libraries for jailbreaks, harmful outputs, and system prompt extraction. I've completed HTB's AI Red Teamer path. This is an emerging attack surface and I'm building practical, repeatable assessment methodology.",
+      "AI/LLM security is an active research area for me. Through TCM Security's AI Hacking course, I built a 5-tool assessment pipeline on dedicated GPU hardware: a prompt injection tester that fires structured attack libraries at chat endpoints with rate limiting and repeat testing, an LLM-as-judge classifier that uses a local model to score injection success with confidence metrics, a temperature probe for detecting non-determinism, a rate limit threshold finder, and a RAG canary system for detecting knowledge base data extraction. I also work with industry tools like Garak, PyRIT, and the Adversarial Robustness Toolbox, and I maintain organized prompt libraries for jailbreaks, harmful outputs, and system prompt extraction. I've completed HTB's AI Red Teamer path. This is an emerging attack surface and I'm building practical, repeatable assessment methodology.",
     followUp: 'Interested in my other research projects?',
   },
   {
