@@ -1,4 +1,4 @@
-import { Linkedin, Mail } from 'lucide-react';
+import { Linkedin, Mail, Globe, Github } from 'lucide-react';
 import { profile } from '../data/resume';
 
 const navLinks = [
@@ -50,6 +50,24 @@ export const Footer = () => {
               aria-label="LinkedIn"
             >
               <Linkedin className="w-4 h-4" />
+            </a>
+            <a
+              href={profile.research}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-text-muted hover:text-primary hover:scale-110 transition-all duration-200"
+              aria-label="Security Research"
+            >
+              <Globe className="w-4 h-4" />
+            </a>
+            <a
+              href={profile.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-text-muted hover:text-text-primary hover:scale-110 transition-all duration-200"
+              aria-label="GitHub"
+            >
+              <Github className="w-4 h-4" />
             </a>
           </div>
         </div>

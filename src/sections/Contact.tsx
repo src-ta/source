@@ -5,6 +5,8 @@ import type { Certification, TrainingPlatform } from '../data/resume';
 import {
   Mail,
   Linkedin,
+  Globe,
+  Github,
   CheckCircle,
   Clock,
   Target,
@@ -95,6 +97,40 @@ export const Contact = () => {
                     <p className="text-sm text-text-muted">LinkedIn</p>
                     <p className="text-text-primary group-hover:text-accent transition-colors">
                       linkedin.com/in/terryarbors
+                    </p>
+                  </div>
+                </motion.a>
+                <motion.a
+                  href={profile.research}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-4 bg-bg-card border border-border rounded-sm hover:border-primary/30 transition-all duration-300 group hover:shadow-[0_0_20px_rgba(245,158,11,0.08)]"
+                  whileHover={{ x: 4 }}
+                >
+                  <div className="w-10 h-10 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:shadow-[0_0_12px_rgba(245,158,11,0.2)] transition-shadow">
+                    <Globe className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-text-muted">Security Research</p>
+                    <p className="text-text-primary group-hover:text-primary transition-colors">
+                      loudmumble.com
+                    </p>
+                  </div>
+                </motion.a>
+                <motion.a
+                  href={profile.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-4 bg-bg-card border border-border rounded-sm hover:border-border transition-all duration-300 group hover:shadow-[0_0_20px_rgba(255,255,255,0.04)]"
+                  whileHover={{ x: 4 }}
+                >
+                  <div className="w-10 h-10 rounded-full bg-border/20 border border-border flex items-center justify-center group-hover:shadow-[0_0_12px_rgba(255,255,255,0.08)] transition-shadow">
+                    <Github className="w-5 h-5 text-text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-text-muted">GitHub</p>
+                    <p className="text-text-primary group-hover:text-text-primary transition-colors">
+                      github.com/loudmumble
                     </p>
                   </div>
                 </motion.a>
