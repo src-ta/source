@@ -20,11 +20,11 @@ export const profile = {
 export const summary = {
   short:
     'Penetration tester and security researcher with 20+ years in technology, including enterprise sales, business operations, and dedicated offensive security training.',
-  long: `Offensive security is where I started and where I've returned with over 20 years of technology experience behind me. I don't just run tools — I build them. Custom adversary simulation frameworks, behavioral intrusion detection systems, automated recon pipelines, and a full security operations platform built around my own engagement workflow.
+  long: `Offensive security is where I started and where I've returned with over 20 years of technology experience behind me. I don't just run tools. I build them. Custom adversary simulation frameworks, behavioral intrusion detection systems, automated recon pipelines, and a full security operations platform built around my own engagement workflow.
 
-Between then and now, I ran business operations in a heavily regulated industry for over a decade — managing compliance, physical security, and multi-site infrastructure — then moved into enterprise technology sales where I helped break a company's first $5M revenue milestone in 25 years of business. I've carried P&L responsibility, presented to C-suite stakeholders, and navigated regulatory environments firsthand. I've been the one deciding what gets funded and what gets shelved — so I write findings that don't get shelved.
+Between then and now, I ran business operations in a heavily regulated industry for over a decade, managing compliance, physical security, and multi-site infrastructure, then moved into enterprise technology sales where I helped break a company's first $5M revenue milestone in 25 years of business. I've carried P&L responsibility, presented to C-suite stakeholders, and navigated regulatory environments firsthand. I've been the one deciding what gets funded and what gets shelved, so I write findings that don't get shelved.
 
-I bring that full range to every engagement. Network penetration testing, web and API security, wireless auditing, physical access assessment — backed by a top 1% rank on HackTheBox Academy, 500+ compromised targets, and reports written for the people who approve the remediation budget, not just the team that implements it.`,
+I bring that full range to every engagement. Network penetration testing, web and API security, wireless auditing, physical access assessment, backed by a top 1% rank on HackTheBox Academy, 500+ compromised targets, and reports written for the people who approve the remediation budget, not just the team that implements it.`,
   pivotQuestion:
     'Why does my business background matter in security?',
   pivotAnswer:
@@ -53,10 +53,11 @@ export const skills: Skill[] = [
   { name: 'Python', category: 'Languages', level: 80 },
   { name: 'PowerShell', category: 'Languages', level: 73 },
   { name: 'C/C++', category: 'Languages', level: 70 },
-  { name: 'JavaScript/Node.js', category: 'Languages', level: 53 },
+  { name: 'JavaScript/TypeScript', category: 'Languages', level: 53 },
   { name: 'Go', category: 'Languages', level: 53 },
   { name: 'Zig', category: 'Languages', level: 40 },
   { name: 'C#/.NET', category: 'Languages', level: 40 },
+  { name: 'SQL', category: 'Languages', level: 45 },
   { name: 'Nmap', category: 'Tools', level: 90 },
   { name: 'Metasploit', category: 'Tools', level: 85 },
   { name: 'Burp Suite', category: 'Tools', level: 80 },
@@ -181,7 +182,7 @@ export const projects: Project[] = [
     highlights: [
       'Custom C2 framework with API-driven architecture',
       'Burp Suite deep integration with OOB detection',
-      'Purple team feedback loop — offensive findings feed directly into Aegis detection rule tuning',
+      'Purple team feedback loop: offensive findings feed directly into Aegis detection rule tuning',
       'Real-time scan orchestration and findings correlation across coordinated tool ecosystem',
     ],
     status: 'Active Development',
@@ -209,7 +210,7 @@ export const projects: Project[] = [
     title: 'AI Security Research Lab',
     subtitle: 'LLM Adversarial Assessment Pipeline',
     description:
-      '5-tool LLM assessment pipeline built during TCM Security AI Hacking coursework. Covers prompt injection testing, LLM-as-judge classification, determinism probing, rate limit analysis, and RAG data poisoning detection — integrated with Garak, PyRIT, and the Adversarial Robustness Toolbox.',
+      '5-tool LLM assessment pipeline built during TCM Security AI Hacking coursework. Covers prompt injection testing, LLM-as-judge classification, determinism probing, rate limit analysis, and RAG data poisoning detection, integrated with Garak, PyRIT, and the Adversarial Robustness Toolbox.',
     tech: ['Python', 'Ollama', 'CUDA', 'Proxmox', 'Flask', 'REST API'],
     highlights: [
       'Custom prompt injection tester with CSV attack libraries and rate-limited concurrent delivery',
@@ -316,7 +317,7 @@ export const experience: Experience[] = [
     title: 'Account Executive',
     period: '2025',
     bullets: [
-      'Consulted on physical security integrations for Corporate, SLED, and NPO clients — surveillance, access control, and emergency response systems.',
+      'Consulted on physical security integrations for Corporate, SLED, and NPO clients: surveillance, access control, and emergency response systems.',
       'Assessed on-premises security posture and integrated physical threat identification into enterprise risk frameworks.',
     ],
   },
@@ -332,7 +333,7 @@ export const experience: Experience[] = [
   },
   {
     company: 'Microsoft',
-    title: 'Direct Sales & Success — Education & NPO',
+    title: 'Direct Sales & Success, Education & NPO',
     period: '2022 – 2023',
     bullets: [
       'Advised enterprise Education and NPO clients on M365 and Azure security, specializing in identity management and GRC alignment.',
@@ -375,7 +376,7 @@ export const chatResponses: ChatResponse[] = [
       'assess',
     ],
     response:
-      "I don't start with scanners. I start by understanding the business — what they do, where the revenue flows, what a breach actually costs them. Then I map the attack surface with that context. Automated enumeration catches the low-hanging fruit, but the critical findings come from manual testing against business logic. A scanner won't find that your password reset flow leaks user existence, or that your API authorization is role-based in name only. I prioritize findings by actual business impact, not just CVSS scores.",
+      "I don't start with scanners. I start by understanding the business: what they do, where the revenue flows, what a breach actually costs them. Then I map the attack surface with that context. Automated enumeration catches the low-hanging fruit, but the critical findings come from manual testing against business logic. A scanner won't find that your password reset flow leaks user existence, or that your API authorization is role-based in name only. I prioritize findings by actual business impact, not just CVSS scores.",
     followUp: 'Want to know about my reporting approach?',
   },
   {
@@ -389,7 +390,7 @@ export const chatResponses: ChatResponse[] = [
       'communicate',
     ],
     response:
-      "My reports are built for two audiences: the technical team that needs to fix the issue, and the executive who needs to fund the fix. Every finding includes a clear business risk statement — not just 'SQL injection found,' but 'Unauthenticated access to customer PII affecting N records, estimated remediation cost vs. breach liability.' I've presented to C-suite stakeholders at enterprise tech companies. I know what makes someone approve a budget line item.",
+      "My reports are built for two audiences: the technical team that needs to fix the issue, and the executive who needs to fund the fix. Every finding includes a clear business risk statement, not just 'SQL injection found,' but 'Unauthenticated access to customer PII affecting N records, estimated remediation cost vs. breach liability.' I've presented to C-suite stakeholders at enterprise tech companies. I know what makes someone approve a budget line item.",
     followUp: 'Want to hear about my business background?',
   },
   {
@@ -403,7 +404,7 @@ export const chatResponses: ChatResponse[] = [
       'value',
     ],
     response:
-      "Three things separate me from a typical candidate: First, I understand business operations — I've run companies, managed P&L, and presented to executives. My findings come with business context, not just technical jargon. Second, I'm hardware-capable — physical access testing, RF analysis, badge cloning. Most pentesters never touch physical. Third, I build and maintain my own tooling and engagement infrastructure — from custom exploit development and automated recon pipelines to a deployment-ready toolkit covering every phase of an assessment. I understand the attack chain because I've implemented both sides of it.",
+      "Three things separate me from a typical candidate: First, I understand business operations. I've run companies, managed P&L, and presented to executives. My findings come with business context, not just technical jargon. Second, I'm hardware-capable. Physical access testing, RF analysis, badge cloning. Most pentesters never touch physical. Third, I build and maintain my own tooling and engagement infrastructure, from custom exploit development and automated recon pipelines to a deployment-ready toolkit covering every phase of an assessment. I understand the attack chain because I've implemented both sides of it.",
     followUp: 'Want to discuss my methodology or availability?',
   },
   {
@@ -417,7 +418,7 @@ export const chatResponses: ChatResponse[] = [
       'business',
     ],
     response:
-      "Security is where I started — I was building tools and doing security research before I was old enough to drive. The business and sales years weren't a detour, they were additional training. I learned how organizations actually make decisions, how budgets get approved, and what risk means when you're the one signing the checks. That perspective is rare in this field and it directly improves the quality of every engagement I deliver.",
+      "Security is where I started. I was building tools and doing security research before I was old enough to drive. The business and sales years weren't a detour, they were additional training. I learned how organizations actually make decisions, how budgets get approved, and what risk means when you're the one signing the checks. That perspective is rare in this field and it directly improves the quality of every engagement I deliver.",
     followUp: 'Want to see how that translates to my reporting approach?',
   },
   {
@@ -430,7 +431,7 @@ export const chatResponses: ChatResponse[] = [
       'work history',
     ],
     response:
-      "20+ years in technology. I started building computers and writing code before middle school. I've run businesses in heavily regulated industries, managed distributed infrastructure, worked enterprise sales at Microsoft, and helped an MSP break their first $5M revenue milestone in 25 years. The last 4+ years have been dedicated entirely to offensive security — not as a career change, but as a return to where I started. The business experience is the bonus, not the foundation.",
+      "20+ years in technology. I started building computers and writing code before middle school. I've run businesses in heavily regulated industries, managed distributed infrastructure, worked enterprise sales at Microsoft, and helped an MSP break their first $5M revenue milestone in 25 years. The last 4+ years have been dedicated entirely to offensive security, not as a career change, but as a return to where I started. The business experience is the bonus, not the foundation.",
     followUp: 'Want to know about my security methodology?',
   },
   {
@@ -445,13 +446,13 @@ export const chatResponses: ChatResponse[] = [
       'script',
     ],
     response:
-      "I build tools because I want to understand the full attack chain, not just run someone else's scripts. My main project is a custom security operations platform — 49+ API endpoints, Burp Suite integration, real-time orchestration — built because existing tools don't match my workflow. Beyond that, I maintain a full engagement infrastructure: automated recon pipelines that chain asset discovery through subdomain takeover detection, custom buffer overflow exploit tooling for x86 targets, NTLM credential attack scripts, a MITRE ATT&CK tactic classifier I wrote for mapping findings during reporting, and a curated deployment toolkit organized by platform and attack phase. My flagship projects are DE-VoidLink — a full adversary simulation framework I built in Zig, Go, and C from real threat intelligence — and Aegis, a behavioral IDS that detects LLM-driven attacks. I also maintain an AI adversarial research lab and custom wireless recon platforms.",
+      "I build tools because I want to understand the full attack chain, not just run someone else's scripts. My main project is a custom security operations platform with 49+ API endpoints, Burp Suite integration, real-time orchestration, built because existing tools don't match my workflow. Beyond that, I maintain a full engagement infrastructure: automated recon pipelines that chain asset discovery through subdomain takeover detection, custom buffer overflow exploit tooling for x86 targets, NTLM credential attack scripts, a MITRE ATT&CK tactic classifier I wrote for mapping findings during reporting, and a curated deployment toolkit organized by platform and attack phase. My flagship projects are DE-VoidLink, a full adversary simulation framework I built in Zig, Go, and C from real threat intelligence, and Aegis, a behavioral IDS that detects LLM-driven attacks. I also maintain an AI adversarial research lab and custom wireless recon platforms.",
     followUp: 'Want to know about my hardware capabilities?',
   },
   {
     patterns: ['hardware', 'physical', 'wireless', 'rf', 'iot', 'flipper', 'proxmark', 'badge'],
     response:
-      "Physical security assessment is a major differentiator in my skillset. I use Proxmark 4 for access control auditing, HackRF for RF spectrum analysis, and custom-built wireless recon platforms for passive environment mapping. I approach physical assessments the same way I approach network pentests — systematic enumeration, targeted exploitation, and clear documentation of the control failures. Most pentesters can't offer physical access testing. I can scope and deliver it as part of a comprehensive engagement.",
+      "Physical security assessment is a major differentiator in my skillset. I use Proxmark 4 for access control auditing, HackRF for RF spectrum analysis, and custom-built wireless recon platforms for passive environment mapping. I approach physical assessments the same way I approach network pentests: systematic enumeration, targeted exploitation, and clear documentation of the control failures. Most pentesters can't offer physical access testing. I can scope and deliver it as part of a comprehensive engagement.",
     followUp: 'Want to know about my engagement methodology?',
   },
   {
@@ -467,7 +468,7 @@ export const chatResponses: ChatResponse[] = [
       'call',
     ],
     response:
-      "I'm available immediately for penetration testing, red team, and security consultant roles — full-time or contract. Best way to reach me is contact@terryarbors.com or LinkedIn at linkedin.com/in/jason-e-terry. You can also see my security research and open source tools at loudmumble.com. Scroll down to the contact section to send a message directly.",
+      "I'm available immediately for penetration testing, red team, and security consultant roles, full-time or contract. Best way to reach me is contact@terryarbors.com or LinkedIn at linkedin.com/in/jason-e-terry. You can also see my security research and open source tools at loudmumble.com. Scroll down to the contact section to send a message directly.",
     followUp: 'Anything else you want to know before reaching out?',
   },
   {
@@ -487,7 +488,7 @@ export const chatResponses: ChatResponse[] = [
       'manage',
     ],
     response:
-      "I've managed teams, reported to executives, and worked independently across every role I've held. I adapt to the organization. In structured environments, I follow the playbook and contribute improvements through the right channels. In leaner teams, I'm self-directed — I'll scope, execute, and deliver without needing oversight. The business background means I understand deadlines, client expectations, and the reality that security work exists within a commercial context.",
+      "I've managed teams, reported to executives, and worked independently across every role I've held. I adapt to the organization. In structured environments, I follow the playbook and contribute improvements through the right channels. In leaner teams, I'm self-directed. I'll scope, execute, and deliver without needing oversight. The business background means I understand deadlines, client expectations, and the reality that security work exists within a commercial context.",
     followUp: 'Want to know about my availability or methodology?',
   },
   {
@@ -501,7 +502,7 @@ export const chatResponses: ChatResponse[] = [
       'qualified',
     ],
     response:
-      "PJPT certified through TCM Security, with PNPT and BSCP (PortSwigger) actively in progress and OSCP planned. I also hold Microsoft fundamentals (AZ-900, SC-900, MS-900, PL-900) from my enterprise sales role. But the more meaningful proof is the practical record — top 1% on HTB Academy, global rank #902 in HTB Labs, and 500+ targets across realistic enterprise scenarios.",
+      "PJPT certified through TCM Security, with PNPT and BSCP (PortSwigger) actively in progress and OSCP planned. I also hold Microsoft fundamentals (AZ-900, SC-900, MS-900, PL-900) from my enterprise sales role. But the more meaningful proof is the practical record: top 1% on HTB Academy, global rank #902 in HTB Labs, and 500+ targets across realistic enterprise scenarios.",
     followUp: 'Want to see my project work or engagement methodology?',
   },
   {
@@ -516,7 +517,7 @@ export const chatResponses: ChatResponse[] = [
       'capable',
     ],
     response:
-      "My technical details are on the Skills section above, but here's what the skill bars don't tell you: I maintain a full engagement toolkit organized by platform and attack phase — hundreds of tools for Windows and Linux, from privilege escalation and credential extraction to pivoting, exfiltration, and payload staging. I choose tools based on the engagement, not habit. When off-the-shelf doesn't fit, I write custom scripts — NTLM spray tools, buffer overflow exploit chains, CSS-based blind data exfiltration, recon automation. I've also built my own MITRE ATT&CK classifier for structuring findings. That range means I can assess environments from network, application, wireless, and physical angles in a single engagement.",
+      "My technical details are on the Skills section above, but here's what the skill bars don't tell you: I maintain a full engagement toolkit organized by platform and attack phase. Hundreds of tools for Windows and Linux, from privilege escalation and credential extraction to pivoting, exfiltration, and payload staging. I choose tools based on the engagement, not habit. When off-the-shelf doesn't fit, I write custom scripts: NTLM spray tools, buffer overflow exploit chains, CSS-based blind data exfiltration, recon automation. I've also built my own MITRE ATT&CK classifier for structuring findings. That range means I can assess environments from network, application, wireless, and physical angles in a single engagement.",
     followUp: 'Want to know how I approach a typical engagement?',
   },
 ];

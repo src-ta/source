@@ -94,7 +94,7 @@ export const Chat = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'bot',
-      text: "Ask me anything you won't find on the resume — my methodology, how I approach engagements, my reporting philosophy, or how my business background strengthens my security work.",
+      text: "Ask me anything you won't find on the resume: my methodology, how I approach engagements, my reporting philosophy, or how my business background strengthens my security work.",
       followUp: 'Try one of the suggested questions below to get started.',
     },
   ]);
@@ -164,7 +164,7 @@ export const Chat = () => {
                 <span className="w-3 h-3 rounded-full bg-primary/60 hover:bg-primary transition-colors cursor-default" />
               </div>
               <span className="text-xs font-mono text-text-muted ml-2">
-                terry-assistant v1.0 — interactive mode
+                terry-assistant v1.0 // interactive mode
               </span>
               <span className="ml-auto text-xs font-mono text-primary/40 animate-pulse">LIVE</span>
             </div>
