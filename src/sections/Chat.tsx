@@ -145,7 +145,7 @@ export const Chat = () => {
           viewport={{ once: true }}
         >
           <div className="flex items-center gap-2 mb-10 text-primary font-mono text-lg">
-            <span className="text-accent">$</span> ./ask-terry --interactive
+            <span className="text-accent">$</span> ./ask-jason --interactive
             <span className="w-2 h-5 bg-primary animate-pulse ml-1" />
           </div>
 
