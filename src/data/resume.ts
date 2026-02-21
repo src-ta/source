@@ -2,7 +2,7 @@ export const profile = {
   name: 'Jason Terry',
   website: 'terryarbors.com',
   title: 'Security Researcher & Penetration Tester',
-  email: 'contact@terryarbors.com',
+  email: 'jason@terryarbors.com',
   linkedin: 'https://linkedin.com/in/jason-e-terry',
   github: 'https://github.com/loudmumble',
   research: 'https://loudmumble.com',
@@ -468,7 +468,7 @@ export const chatResponses: ChatResponse[] = [
       'call',
     ],
     response:
-      "I'm available immediately for penetration testing, red team, and security consultant roles, full-time or contract. Best way to reach me is contact@terryarbors.com or LinkedIn at linkedin.com/in/jason-e-terry. You can also see my security research and open source tools at loudmumble.com. Scroll down to the contact section to send a message directly.",
+      "I'm available immediately for penetration testing, red team, and security consultant roles, full-time or contract. Best way to reach me is jason@terryarbors.com or LinkedIn at linkedin.com/in/jason-e-terry. You can also see my security research and open source tools at loudmumble.com. Scroll down to the contact section to send a message directly.",
     followUp: 'Anything else you want to know before reaching out?',
   },
   {

@@ -46,7 +46,7 @@ export const Contact = () => {
           viewport={{ once: true }}
         >
           <div className="flex items-center gap-2 mb-10 text-primary font-mono text-lg">
-            <span className="text-accent">$</span> ping terry@arbors
+            <span className="text-accent">$</span> ping jason@terryarbors.com
             <span className="w-2 h-5 bg-primary animate-pulse ml-1" />
           </div>
 
