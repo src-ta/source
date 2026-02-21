@@ -20,11 +20,11 @@ export const profile = {
 export const summary = {
   short:
     'Penetration tester and security researcher with 20+ years in technology, including enterprise sales, business operations, and dedicated offensive security training.',
-  long: `I started working with computers at 8 and was programming by 10. By middle school I was deep in security research and tool development. That foundation never left — I built on it through every role since.
+  long: `Offensive security is where I started and where I've returned with over 20 years of technology experience behind me. I don't just run tools — I build them. Custom adversary simulation frameworks, behavioral intrusion detection systems, automated recon pipelines, and a full security operations platform built around my own engagement workflow.
 
-I spent over a decade running operations in a heavily regulated industry, managing compliance, physical security, and multi-site infrastructure. I then moved into enterprise technology sales where I helped break a company's first major revenue milestone in over two decades of business.
+Between then and now, I ran business operations in a heavily regulated industry for over a decade — managing compliance, physical security, and multi-site infrastructure — then moved into enterprise technology sales where I helped break a company's first $5M revenue milestone in 25 years of business. I've carried P&L responsibility, presented to C-suite stakeholders, and navigated regulatory environments firsthand. I've been the one deciding what gets funded and what gets shelved — so I write findings that don't get shelved.
 
-Now I apply that full range of experience to offensive security — network penetration testing, web/API security, wireless auditing, and physical access assessment. What separates me from a typical candidate is that I understand business risk firsthand. I've carried P&L responsibility, presented to C-suite stakeholders, and navigated regulatory environments. I write reports that drive remediation, not just document findings.`,
+I bring that full range to every engagement. Network penetration testing, web and API security, wireless auditing, physical access assessment — backed by a top 1% rank on HackTheBox Academy, 500+ compromised targets, and reports written for the people who approve the remediation budget, not just the team that implements it.`,
   pivotQuestion:
     'Why does my business background matter in security?',
   pivotAnswer:
@@ -290,6 +290,11 @@ export const training: TrainingPlatform[] = [
     name: 'HackTheBox Labs',
     achievement: 'Global #902',
     detail: 'Top 1,000 in competitive machine exploitation',
+  },
+  {
+    name: 'TryHackMe',
+    achievement: 'Top 5%',
+    detail: 'Global rank top 5%',
   },
   {
     name: 'TCM Security',
