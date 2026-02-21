@@ -55,6 +55,7 @@ export const skills: Skill[] = [
   { name: 'C/C++', category: 'Languages', level: 70 },
   { name: 'JavaScript/Node.js', category: 'Languages', level: 53 },
   { name: 'Go', category: 'Languages', level: 53 },
+  { name: 'Zig', category: 'Languages', level: 40 },
   { name: 'C#/.NET', category: 'Languages', level: 40 },
   { name: 'Nmap', category: 'Tools', level: 90 },
   { name: 'Metasploit', category: 'Tools', level: 85 },
@@ -74,6 +75,7 @@ export const skills: Skill[] = [
   { name: 'Proxmox/KVM', category: 'Infrastructure', level: 80 },
   { name: 'Ansible', category: 'Infrastructure', level: 55 },
   { name: 'Terraform', category: 'Infrastructure', level: 50 },
+  { name: 'eBPF', category: 'Infrastructure', level: 45 },
 ];
 
 export const skillCategories = [
