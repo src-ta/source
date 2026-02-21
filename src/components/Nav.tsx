@@ -70,7 +70,7 @@ export const Nav = () => {
             <span className="absolute -inset-2 bg-primary/20 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
           </div>
           <span className="relative">
-            TA
+            JT
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
           </span>
         </a>
