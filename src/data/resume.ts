@@ -170,7 +170,7 @@ export const projects: Project[] = [
     title: 'Custom Security Operations Platform',
     subtitle: 'Full-Stack Offensive Testing Framework',
     description:
-      "A modular security testing framework built from scratch around my engagement workflow. 49+ API endpoints, Burp Suite integration, interactive shell management, and real-time attack orchestration. Designed to unify reconnaissance, exploitation, and reporting into a single operator-driven interface.",
+      "A modular security testing framework built from scratch around my engagement workflow. 49+ API endpoints, Burp Suite integration, interactive shell management, and automated attack orchestration. Designed to unify reconnaissance, exploitation, and reporting into a single operator-driven interface.",
     tech: [
       'Node.js',
       'Express',
@@ -446,7 +446,7 @@ export const chatResponses: ChatResponse[] = [
       'script',
     ],
     response:
-      "I build tools because I want to understand the full attack chain, not just run someone else's scripts. My main project is a custom security operations platform with 49+ API endpoints, Burp Suite integration, real-time orchestration, built because existing tools don't match my workflow. Beyond that, I maintain a full engagement infrastructure: automated recon pipelines that chain asset discovery through subdomain takeover detection, custom buffer overflow exploit tooling for x86 targets, NTLM credential attack scripts, a MITRE ATT&CK tactic classifier I wrote for mapping findings during reporting, and a curated deployment toolkit organized by platform and attack phase. My flagship projects are DE-VoidLink, a full adversary simulation framework I built in Zig, Go, and C from real threat intelligence, and Aegis, a behavioral IDS that detects LLM-driven attacks. I also maintain an AI adversarial research lab and custom wireless recon platforms.",
+      "I build tools because I want to understand the full attack chain, not just run someone else's scripts. My main project is a custom security operations platform with 49+ API endpoints, Burp Suite integration, automated orchestration, built because existing tools don't match my workflow. Beyond that, I maintain a full engagement infrastructure: automated recon pipelines that chain asset discovery through subdomain takeover detection, custom buffer overflow exploit tooling for x86 targets, NTLM credential attack scripts, a MITRE ATT&CK tactic classifier I wrote for mapping findings during reporting, and a curated deployment toolkit organized by platform and attack phase. My flagship projects are DE-VoidLink, a full adversary simulation framework I built in Zig, Go, and C from real threat intelligence, and Aegis, a behavioral IDS that detects LLM-driven attacks. I also maintain an AI adversarial research lab and custom wireless recon platforms.",
     followUp: 'Want to know about my hardware capabilities?',
   },
   {

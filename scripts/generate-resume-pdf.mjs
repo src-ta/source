@@ -103,7 +103,7 @@ const resumeHTML = `<!DOCTYPE html>
 
 <p><span class="project-title">Custom Security Operations Platform</span> <span class="project-tech">| Node.js, React, TypeScript, PostgreSQL</span></p>
 <ul>
-  <li>Built a modular security testing framework with 49+ API endpoints, Burp Suite deep integration, and real-time attack orchestration.</li>
+  <li>Built a modular security testing framework with 49+ API endpoints, Burp Suite deep integration, and automated attack orchestration.</li>
   <li>Operator-driven workflow unifying reconnaissance, exploitation, and reporting with a plugin architecture for rapid capability extension.</li>
 </ul>
 
