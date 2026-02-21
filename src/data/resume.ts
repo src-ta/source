@@ -47,7 +47,7 @@ export const skills: Skill[] = [
   { name: 'AI/LLM Red Teaming', category: 'Offensive', level: 70 },
   { name: 'OSINT', category: 'Offensive', level: 70 },
   { name: 'Physical Security', category: 'Offensive', level: 65 },
-  { name: 'Binary Exploitation', category: 'Offensive', level: 35 },
+  { name: 'Binary Exploitation', category: 'Offensive', level: 60 },
   { name: 'Reverse Engineering', category: 'Offensive', level: 60 },
   { name: 'Bash', category: 'Languages', level: 85 },
   { name: 'Python', category: 'Languages', level: 80 },
