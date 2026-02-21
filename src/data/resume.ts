@@ -39,13 +39,13 @@ export interface Skill {
 }
 
 export const skills: Skill[] = [
+  { name: 'OSINT', category: 'Offensive', level: 90 },
   { name: 'Network & AD Pentesting', category: 'Offensive', level: 85 },
   { name: 'Web/API Security', category: 'Offensive', level: 80 },
   { name: 'Wireless Auditing', category: 'Offensive', level: 80 },
   { name: 'IoT/Hardware Security', category: 'Offensive', level: 75 },
   { name: 'Offensive Tool Development', category: 'Offensive', level: 70 },
   { name: 'AI/LLM Red Teaming', category: 'Offensive', level: 70 },
-  { name: 'OSINT', category: 'Offensive', level: 90 },
   { name: 'Physical Security', category: 'Offensive', level: 65 },
   { name: 'Binary Exploitation', category: 'Offensive', level: 60 },
   { name: 'Reverse Engineering', category: 'Offensive', level: 60 },
