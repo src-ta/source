@@ -95,7 +95,7 @@ export const Contact = () => {
                   <div>
                     <p className="text-sm text-text-muted">LinkedIn</p>
                     <p className="text-text-primary group-hover:text-accent transition-colors">
-                      linkedin.com/in/terryarbors
+                      linkedin.com/in/jason-e-terry
                     </p>
                   </div>
                 </motion.a>

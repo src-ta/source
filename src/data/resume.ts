@@ -1,9 +1,9 @@
 export const profile = {
-  name: 'Terry Arbors',
+  name: 'Jason Terry',
   website: 'terryarbors.com',
   title: 'Security Researcher & Penetration Tester',
   email: 'contact@terryarbors.com',
-  linkedin: 'https://linkedin.com/in/terryarbors',
+  linkedin: 'https://linkedin.com/in/jason-e-terry',
   github: 'https://github.com/loudmumble',
   research: 'https://loudmumble.com',
   tagline: ['Security Researcher', 'Penetration Tester', '20+ Years in Tech', 'HTB Top 1%'],
@@ -48,7 +48,7 @@ export const skills: Skill[] = [
   { name: 'OSINT', category: 'Offensive', level: 70 },
   { name: 'Physical Security', category: 'Offensive', level: 65 },
   { name: 'Binary Exploitation', category: 'Offensive', level: 35 },
-  { name: 'Reverse Engineering', category: 'Offensive', level: 25 },
+  { name: 'Reverse Engineering', category: 'Offensive', level: 60 },
   { name: 'Bash', category: 'Languages', level: 85 },
   { name: 'Python', category: 'Languages', level: 80 },
   { name: 'PowerShell', category: 'Languages', level: 73 },
@@ -179,8 +179,8 @@ export const projects: Project[] = [
     highlights: [
       'Custom C2 framework with API-driven architecture',
       'Burp Suite deep integration with OOB detection',
-      'Real-time scan orchestration and findings correlation',
-      'Modular plugin architecture for rapid capability extension',
+      'Purple team feedback loop — offensive findings feed directly into Aegis detection rule tuning',
+      'Real-time scan orchestration and findings correlation across coordinated tool ecosystem',
     ],
     status: 'Active Development',
   },
@@ -205,7 +205,7 @@ export const projects: Project[] = [
   },
   {
     title: 'AI Security Research Lab',
-    subtitle: 'TCM Security AI Hacking Coursework',
+    subtitle: 'LLM Adversarial Assessment Pipeline',
     description:
       '5-tool LLM assessment pipeline built during TCM Security AI Hacking coursework. Covers prompt injection testing, LLM-as-judge classification, determinism probing, rate limit analysis, and RAG data poisoning detection — integrated with Garak, PyRIT, and the Adversarial Robustness Toolbox.',
     tech: ['Python', 'Ollama', 'CUDA', 'Proxmox', 'Flask', 'REST API'],
@@ -460,7 +460,7 @@ export const chatResponses: ChatResponse[] = [
       'call',
     ],
     response:
-      "I'm available immediately for penetration testing, red team, and security consultant roles — full-time or contract. Best way to reach me is contact@terryarbors.com or LinkedIn at linkedin.com/in/terryarbors. You can also see my security research and open source tools at loudmumble.com. Scroll down to the contact section to send a message directly.",
+      "I'm available immediately for penetration testing, red team, and security consultant roles — full-time or contract. Best way to reach me is contact@terryarbors.com or LinkedIn at linkedin.com/in/jason-e-terry. You can also see my security research and open source tools at loudmumble.com. Scroll down to the contact section to send a message directly.",
     followUp: 'Anything else you want to know before reaching out?',
   },
   {

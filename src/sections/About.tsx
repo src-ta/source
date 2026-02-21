@@ -70,7 +70,6 @@ export const About = () => {
               <div className="absolute top-0 left-[-5px] w-2.5 h-2.5 rounded-full bg-accent shadow-[0_0_8px_rgba(0,212,255,0.5)]" />
               <div className="space-y-12">
                 {experience.map((job, index) => {
-                  const isPivot = job.company === 'Major Cloud Provider';
                   return (
                     <motion.div 
                       key={index}
@@ -81,12 +80,7 @@ export const About = () => {
                       className="relative group"
                     >
                       <motion.div
-                        className={`absolute -left-[37px] top-1.5 w-4 h-4 rounded-full border-2 transition-all duration-300 ${
-                          isPivot
-                            ? 'bg-primary border-primary shadow-[0_0_12px_rgba(245,158,11,0.5)]'
-                            : 'bg-bg-deep border-text-secondary group-hover:border-primary group-hover:shadow-[0_0_8px_rgba(245,158,11,0.3)]'
-                        }`}
-                        whileInView={isPivot ? { scale: [1, 1.3, 1] } : {}}
+                        className="absolute -left-[37px] top-1.5 w-4 h-4 rounded-full border-2 transition-all duration-300 bg-bg-deep border-text-secondary group-hover:border-primary group-hover:shadow-[0_0_8px_rgba(245,158,11,0.3)]"
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.1 + 0.3, duration: 0.5 }}
                       />
@@ -95,21 +89,6 @@ export const About = () => {
                         <span className="font-mono text-accent text-sm">{job.period}</span>
                         <h3 className="text-xl font-bold text-text-primary flex items-center gap-2 group-hover:text-primary transition-colors duration-300">
                           {job.company}
-                          {isPivot && (
-                            <motion.span
-                              className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full border border-primary/20 shadow-[0_0_10px_rgba(245,158,11,0.2)]"
-                              animate={{
-                                boxShadow: [
-                                  '0 0 10px rgba(245,158,11,0.2)',
-                                  '0 0 20px rgba(245,158,11,0.4)',
-                                  '0 0 10px rgba(245,158,11,0.2)',
-                                ],
-                              }}
-                              transition={{ duration: 2, repeat: Infinity }}
-                            >
-                              THE PIVOT
-                            </motion.span>
-                          )}
                         </h3>
                         <p className="text-text-secondary font-medium">{job.title}</p>
                         

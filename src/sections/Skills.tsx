@@ -1,61 +1,61 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useRef } from 'react';
+import { motion, AnimatePresence, useInView } from 'framer-motion';
 import { skills, skillCategories, frameworks, extendedTools } from '../data/resume';
 import type { Skill } from '../data/resume';
 import { Shield } from 'lucide-react';
 
-const SkillBar = ({ skill, index }: { skill: Skill; index: number }) => (
-  <motion.div
-    initial={{ opacity: 0, x: -20 }}
-    whileInView={{ opacity: 1, x: 0 }}
-    viewport={{ once: true }}
-    transition={{ delay: index * 0.05 }}
-    className="group"
-  >
-    <div className="flex justify-between items-center mb-2">
-      <span className="text-sm font-medium text-text-primary group-hover:text-primary transition-colors duration-300">
-        {skill.name}
-      </span>
-      <motion.span
-        className="text-xs font-mono text-primary/80 bg-primary/5 px-1.5 py-0.5 rounded"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: index * 0.05 + 0.8 }}
+const SkillBar = ({ skill, index }: { skill: Skill; index: number }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true });
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: -20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.05 }}
+      className="group"
+    >
+      <div className="flex justify-between items-center mb-2">
+        <span className="text-sm font-medium text-text-primary group-hover:text-primary transition-colors duration-300">
+          {skill.name}
+        </span>
+        <motion.span
+          className="text-xs font-mono text-primary/80 bg-primary/5 px-1.5 py-0.5 rounded"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: index * 0.05 + 0.8 }}
+        >
+          {skill.level}%
+        </motion.span>
+      </div>
+      <div
+        ref={ref}
+        className="h-2.5 bg-bg-deep rounded-full overflow-hidden relative border border-border/30"
       >
-        {skill.level}%
-      </motion.span>
-    </div>
-    <div className="h-2.5 bg-bg-deep rounded-full overflow-hidden relative border border-border/30">
-      <motion.div
-        className="h-full rounded-full relative overflow-hidden"
-        style={{
-          background: `linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 100%)`,
-          willChange: 'width',
-        }}
-        initial={{ width: "0%" }}
-        animate={{ width: `${skill.level}%` }}
-        transition={{ duration: 1.2, delay: index * 0.05 + 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-      >
-        <div
-          className="absolute inset-0 opacity-40"
+        <motion.div
+          className="h-full rounded-full relative overflow-hidden"
           style={{
-            background: 'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%)',
-            animation: 'shimmer 2s ease-in-out infinite',
-            animationDelay: `${index * 0.1}s`,
+            background: `linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 100%)`,
           }}
-        />
-      </motion.div>
-      <motion.div
-        className="absolute top-0 right-0 h-full w-1 bg-white/50 rounded-full blur-sm"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: [0, 1, 0] }}
-        viewport={{ once: true }}
-        transition={{ duration: 1.5, delay: index * 0.05 + 0.5 }}
-      />
-    </div>
-  </motion.div>
-);
+          initial={{ width: '0%' }}
+          animate={isInView ? { width: `${skill.level}%` } : { width: '0%' }}
+          transition={{ duration: 1.2, delay: index * 0.05 + 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+        >
+          <div
+            className="absolute inset-0 opacity-40"
+            style={{
+              background: 'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%)',
+              animation: 'shimmer 2s ease-in-out infinite',
+              animationDelay: `${index * 0.1}s`,
+            }}
+          />
+        </motion.div>
+      </div>
+    </motion.div>
+  );
+};
 
 export const Skills = () => {
   const [activeCategory, setActiveCategory] = useState<string>(skillCategories[0]);

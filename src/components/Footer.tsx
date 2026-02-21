@@ -74,7 +74,7 @@ export const Footer = () => {
 
         <div className="mt-6 text-center">
           <p className="text-xs text-text-muted font-mono">
-            &copy; {new Date().getFullYear()} Terry Arbors. All rights
+            &copy; {new Date().getFullYear()} Jason Terry. All rights
             reserved.
           </p>
           <p className="text-[10px] text-text-muted/50 font-mono mt-1">

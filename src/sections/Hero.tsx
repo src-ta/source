@@ -135,7 +135,7 @@ export const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className="block text-text-primary mb-3 text-glow drop-shadow-2xl">Terry Arbors</span>
+            <span className="block text-text-primary mb-3 text-glow drop-shadow-2xl">{profile.name}</span>
             <div className="h-[1.2em] relative overflow-hidden">
                <AnimatePresence mode="wait">
                 <motion.span 
