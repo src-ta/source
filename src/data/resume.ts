@@ -317,8 +317,9 @@ export const experience: Experience[] = [
     title: 'Account Executive',
     period: '2025 – Present',
     bullets: [
-      'Consulted on physical security integrations for Corporate, SLED, and NPO clients: surveillance, access control, and emergency response systems.',
+      'Consulted on physical security integrations across corporate and enterprise clients: surveillance systems, access control, and emergency response infrastructure.',
       'Assessed on-premises security posture and integrated physical threat identification into enterprise risk frameworks.',
+      'Coordinated deployment of tracking and monitoring systems to strengthen organizational security resilience.',
     ],
   },
   {
