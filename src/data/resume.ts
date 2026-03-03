@@ -142,7 +142,7 @@ export const projects: Project[] = [
     title: 'DE-VoidLink',
     subtitle: 'Adversary Simulation Framework',
     description:
-      'Replicated the VoidLink agentic malware framework from published threat intelligence for detection engineering research. Published 10 YARA rules, 7 Sigma rules, and Suricata detection signatures.',
+      'Replicated the VoidLink agentic malware framework from published threat intelligence for detection engineering research. Published 11 YARA rules, 7 Sigma rules, and Suricata detection signatures.',
     tech: ['Zig', 'Go', 'C', 'YARA', 'Sigma', 'Suricata'],
     highlights: [
       'Zig beacon with direct syscall fingerprinting',
@@ -156,13 +156,13 @@ export const projects: Project[] = [
     title: 'Aegis',
     subtitle: 'Behavioral IDS for Agentic Threats',
     description:
-      'Detects LLM-driven attacks via cadence analysis and inter-arrival time fingerprinting. 7 detection rules, 9 LLM model profiles, 125 tests.',
-    tech: ['Python', 'eBPF', 'Machine Learning', 'Behavioral Analysis'],
+      'Detects LLM-driven attacks via cadence analysis and inter-arrival time fingerprinting. 9 detection rules, 9 LLM model profiles, 190 tests.',
+    tech: ['Go', 'eBPF', 'Machine Learning', 'Behavioral Analysis'],
     highlights: [
       'Inter-arrival time fingerprinting for LLM detection',
       '9 known LLM model behavioral profiles',
-      '7 behavioral detection rules (AEGIS-001 through AEGIS-007)',
-      '125 tests passing with full coverage',
+      '9 behavioral detection rules (AEGIS-001 through AEGIS-009)',
+      '190 tests passing with full coverage',
     ],
     status: 'Active Development',
   },
@@ -315,7 +315,7 @@ export const experience: Experience[] = [
   {
     company: 'Knight Watch Inc.',
     title: 'Account Executive',
-    period: '2025 – Present',
+    period: '2025',
     bullets: [
       'Consulted on physical security integrations across corporate and enterprise clients: surveillance systems, access control, and emergency response infrastructure.',
       'Assessed on-premises security posture and integrated physical threat identification into enterprise risk frameworks.',
