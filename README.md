@@ -1,10 +1,10 @@
 # terryarbors
 
-Portfolio site for the Terry Arbors cybersecurity persona.
+Professional portfolio site for Jason Terry — Security Researcher & Penetration Tester. Live at [terryarbors.com](https://terryarbors.com).
 
 ## Overview
 
-A single-page portfolio built with Vite, React 19, and TypeScript. Dark-themed with animated section transitions via framer-motion. The site presents a cybersecurity professional persona named Terry Arbors and includes sections for hero, skills, projects, about, an interactive chat widget, and contact. Tailwind CSS handles styling. The built output goes to `dist/` and is ready for static hosting.
+Single-page portfolio built with Vite, React 19, and TypeScript. Dark-themed with animated section transitions via framer-motion. Sections: Nav, Hero, Skills, Projects, About, interactive Chat widget, Contact, Footer. Tailwind CSS handles styling. Built output goes to `dist/` for static hosting.
 
 ## Install / Build
 
@@ -24,16 +24,6 @@ Lint:
 ```bash
 npm run lint
 ```
-
-## Usage
-
-After `npm run build`, serve the `dist/` directory from any static host. The site is a single HTML entry point with client-side routing handled by React.
-
-Sections rendered in order: Nav, Hero, Skills, Projects, About, Chat, Contact, Footer.
-
-## Testing
-
-No automated test suite. Lint passes with `npm run lint`.
 
 ## Architecture
 
@@ -61,4 +51,3 @@ src/
 - Tailwind CSS 4 (styling)
 - framer-motion 12 (animations)
 - lucide-react (icons)
-- Persona: Terry Arbors (cybersecurity)

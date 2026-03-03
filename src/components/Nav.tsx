@@ -103,6 +103,8 @@ export const Nav = () => {
         </div>
 
         <button
+          aria-label="Toggle navigation menu"
+          aria-expanded={isOpen}
           className="md:hidden text-text-primary hover:text-primary transition-colors"
           onClick={() => setIsOpen(!isOpen)}
         >

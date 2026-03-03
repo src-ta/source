@@ -315,7 +315,7 @@ export const experience: Experience[] = [
   {
     company: 'Knight Watch Inc.',
     title: 'Account Executive',
-    period: '2025',
+    period: '2025 – Present',
     bullets: [
       'Consulted on physical security integrations for Corporate, SLED, and NPO clients: surveillance, access control, and emergency response systems.',
       'Assessed on-premises security posture and integrated physical threat identification into enterprise risk frameworks.',

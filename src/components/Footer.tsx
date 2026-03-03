@@ -78,7 +78,7 @@ export const Footer = () => {
             reserved.
           </p>
           <p className="text-[10px] text-text-muted/50 font-mono mt-1">
-            Last Updated: 2-9-2026
+            Last Updated: {new Date().toLocaleDateString('en-US', { month: 'numeric', day: 'numeric', year: 'numeric' })}
           </p>
           <p className="text-[10px] text-text-muted/30 font-mono mt-2 italic">
             &ldquo;It&apos;s not a deficit of attention, it&apos;s an abundance of curiosity.&rdquo;

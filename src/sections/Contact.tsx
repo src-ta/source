@@ -152,10 +152,11 @@ export const Contact = () => {
             <div className="space-y-8">
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="group">
-                  <label className="block text-sm text-text-muted mb-1.5 font-mono group-focus-within:text-primary transition-colors">
+                  <label htmlFor="contact-name" className="block text-sm text-text-muted mb-1.5 font-mono group-focus-within:text-primary transition-colors">
                     name
                   </label>
                   <input
+                    id="contact-name"
                     type="text"
                     required
                     value={name}
@@ -165,10 +166,11 @@ export const Contact = () => {
                   />
                 </div>
                 <div className="group">
-                  <label className="block text-sm text-text-muted mb-1.5 font-mono group-focus-within:text-primary transition-colors">
+                  <label htmlFor="contact-email" className="block text-sm text-text-muted mb-1.5 font-mono group-focus-within:text-primary transition-colors">
                     email
                   </label>
                   <input
+                    id="contact-email"
                     type="email"
                     required
                     value={email}
@@ -178,10 +180,11 @@ export const Contact = () => {
                   />
                 </div>
                 <div className="group">
-                  <label className="block text-sm text-text-muted mb-1.5 font-mono group-focus-within:text-primary transition-colors">
+                  <label htmlFor="contact-message" className="block text-sm text-text-muted mb-1.5 font-mono group-focus-within:text-primary transition-colors">
                     message
                   </label>
                   <textarea
+                    id="contact-message"
                     required
                     rows={5}
                     value={message}

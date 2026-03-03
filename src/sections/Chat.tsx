@@ -65,7 +65,6 @@ const TypingText = ({
 
   useEffect(() => {
     indexRef.current = 0;
-    setDisplayed('');
 
     const interval = setInterval(() => {
       indexRef.current += 1;

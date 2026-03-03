@@ -55,6 +55,13 @@ const itemVariants = {
   visible: { y: 0, opacity: 1 },
 };
 
+const PARTICLES = Array.from({ length: 15 }, () => ({
+  x: Math.random() * 100,
+  y: 100 + Math.random() * 100,
+  duration: 10 + Math.random() * 20,
+  delay: Math.random() * 10,
+}));
+
 export const Hero = () => {
   const { scrollY } = useScroll();
   const y2 = useTransform(scrollY, [0, 500], [0, -100]);
@@ -68,6 +75,8 @@ export const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
+
+
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       <div className="absolute inset-0 bg-bg-deep z-0">
@@ -77,13 +86,13 @@ export const Hero = () => {
       
       {/* Floating Code Particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
-        {[...Array(15)].map((_, i) => (
+        {PARTICLES.map((particle, i) => (
           <motion.div
             key={i}
             className="absolute text-primary/10 font-mono text-xs whitespace-nowrap"
             initial={{ 
-              x: `${Math.random() * 100}vw`, 
-              y: `${100 + Math.random() * 100}vh`,
+              x: `${particle.x}vw`, 
+              y: `${particle.y}vh`,
               opacity: 0 
             }}
             animate={{ 
@@ -91,9 +100,9 @@ export const Hero = () => {
               opacity: [0, 0.4, 0] 
             }}
             transition={{ 
-              duration: 10 + Math.random() * 20, 
+              duration: particle.duration, 
               repeat: Infinity,
-              delay: Math.random() * 10,
+              delay: particle.delay,
               ease: "linear"
             }}
           >
