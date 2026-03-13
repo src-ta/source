@@ -4,7 +4,7 @@ Professional portfolio site for Jason Terry — Security Researcher & Penetratio
 
 ## Overview
 
-Single-page portfolio built with Vite, React 19, and TypeScript. Dark-themed with animated section transitions via framer-motion. Sections: Nav, Hero, Skills, Projects, About, interactive Chat widget, Contact, Footer. Tailwind CSS handles styling. Built output goes to `dist/` for static hosting.
+Single-page portfolio built with Vite, React 19, and TypeScript. Dark-themed with animated section transitions via framer-motion. Sections: Nav, Hero, Skills, Projects, About, Chat (client-side keyword-matching assistant), Contact (mailto-based form), Footer. Tailwind CSS handles styling. Built output goes to `dist/` for static hosting.
 
 ## Install / Build
 
@@ -35,13 +35,13 @@ src/
     Skills.tsx      Skills display
     Projects.tsx    Project cards
     About.tsx       Bio section
-    Chat.tsx        Interactive chat widget
-    Contact.tsx     Contact form/links
+    Chat.tsx        Client-side chat assistant (keyword-matching, no backend API)
+    Contact.tsx     Contact form (mailto-based, opens email client)
   components/
     Nav.tsx         Navigation bar
     Footer.tsx      Footer
-  data/             Static content data
-  hooks/            Custom React hooks
+    data/             Static content data
+  scripts/          Puppeteer-based resume PDF generator
 ```
 
 ## Tech Stack
