@@ -1,10 +1,38 @@
+/**
+ * generate-resume-pdf.mjs
+ *
+ * Generates public/Jason-Terry-Resume.pdf using Puppeteer (headless Chromium).
+ *
+ * Usage:
+ *   node scripts/generate-resume-pdf.mjs
+ *
+ * Output:
+ *   public/Jason-Terry-Resume.pdf  (Letter format, print-quality, ~1 page)
+ *
+ * Requirements:
+ *   - Node.js 20.19+
+ *   - puppeteer installed (devDependency — run `npm install` first)
+ *   - Puppeteer downloads bundled Chromium on first `npm install`; no separate browser needed
+ *
+ * Notes:
+ *   - The resume content is embedded directly in this file as `resumeHTML` (not pulled from
+ *     the site's src/data/resume.ts). This makes the script fully self-contained and runnable
+ *     without a dev server. Keep both in sync when updating resume content.
+ *   - Commit the regenerated PDF to keep the public download current.
+ */
+
 import puppeteer from 'puppeteer';
 import { writeFileSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
+// ESM-compatible __dirname shim
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
+// ─── Resume HTML ──────────────────────────────────────────────────────────────
+// Self-contained HTML document with all CSS inlined. Rendered by headless
+// Chromium and exported as a Letter-format PDF. Edit this string to update
+// the resume content, then re-run the script.
 const resumeHTML = `<!DOCTYPE html>
 <html>
 <head>
@@ -207,21 +235,28 @@ const resumeHTML = `<!DOCTYPE html>
 </body>
 </html>`;
 
+// ─── PDF Generation ───────────────────────────────────────────────────────────
+
 async function generatePDF() {
+  // Launch headless Chromium (bundled with Puppeteer — no separate install needed)
   const browser = await puppeteer.launch({
     headless: true,
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
   });
 
   const page = await browser.newPage();
+
+  // Load the resume HTML directly (no network request — waitUntil:'networkidle0'
+  // ensures fonts and any inline resources are fully settled before printing)
   await page.setContent(resumeHTML, { waitUntil: 'networkidle0' });
 
+  // Output path: public/Jason-Terry-Resume.pdf (served as a static asset)
   const outputPath = resolve(__dirname, '..', 'public', 'Jason-Terry-Resume.pdf');
 
   await page.pdf({
     path: outputPath,
-    format: 'Letter',
-    printBackground: true,
+    format: 'Letter',       // 8.5 × 11 inches
+    printBackground: true,  // include background colors/images
     displayHeaderFooter: false,
   });
 
