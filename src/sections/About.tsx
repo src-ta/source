@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { summary, experience } from '../data/resume';
-import { ChevronRight } from 'lucide-react';
 
 export const About = () => {
   return (
@@ -91,22 +90,6 @@ export const About = () => {
                           {job.company}
                         </h3>
                         <p className="text-text-secondary font-medium">{job.title}</p>
-                        
-                        <ul className="mt-4 space-y-2">
-                          {job.bullets.map((bullet, i) => (
-                            <motion.li
-                              key={i}
-                              initial={{ opacity: 0, x: -10 }}
-                              whileInView={{ opacity: 1, x: 0 }}
-                              viewport={{ once: true }}
-                              transition={{ delay: index * 0.1 + i * 0.05 }}
-                              className="flex items-start gap-2 text-sm text-text-secondary"
-                            >
-                              <ChevronRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                              <span>{bullet}</span>
-                            </motion.li>
-                          ))}
-                        </ul>
                       </div>
                     </motion.div>
                   );

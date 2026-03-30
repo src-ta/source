@@ -22,7 +22,7 @@ export const summary = {
     'Penetration tester and security researcher with 20+ years in technology, including enterprise sales, business operations, and dedicated offensive security training.',
   long: `Offensive security is where I started and where I've returned with over 20 years of technology experience behind me. I don't just run tools. I build them. Custom adversary simulation frameworks, behavioral intrusion detection systems, automated recon pipelines, and a full security operations platform built around my own engagement workflow.
 
-Between then and now, I ran business operations in a heavily regulated industry for over a decade, managing compliance, physical security, and multi-site infrastructure, then moved into enterprise technology sales where I helped break a company's first $5M revenue milestone in 25 years of business. I've carried P&L responsibility, presented to C-suite stakeholders, and navigated regulatory environments firsthand. I've been the one deciding what gets funded and what gets shelved, so I write findings that don't get shelved.
+Between then and now, I worked at Microsoft, Apex Digital Solutions, Knight Watch, and Blockchain Solutions across enterprise sales, business operations, and infrastructure. That experience gave me a perspective most pentesters don't have — I understand how organizations make decisions and what makes findings actionable.
 
 I bring that full range to every engagement. Network penetration testing, web and API security, wireless auditing, physical access assessment, backed by a top 1% rank on HackTheBox Academy, 500+ compromised targets, and reports written for the people who approve the remediation budget, not just the team that implements it.`,
   pivotQuestion:
@@ -308,7 +308,6 @@ export interface Experience {
   company: string;
   title: string;
   period: string;
-  bullets: string[];
 }
 
 export const experience: Experience[] = [
@@ -316,38 +315,21 @@ export const experience: Experience[] = [
     company: 'Knight Watch Inc.',
     title: 'Account Executive',
     period: '2025',
-    bullets: [
-      'Consulted on physical security integrations across corporate and enterprise clients: surveillance systems, access control, and emergency response infrastructure.',
-      'Assessed on-premises security posture and integrated physical threat identification into enterprise risk frameworks.',
-      'Coordinated deployment of tracking and monitoring systems to strengthen organizational security resilience.',
-    ],
   },
   {
     company: 'Apex Digital Solutions',
     title: 'Senior Account Executive',
     period: '2023 – 2024',
-    bullets: [
-      'Helped break the company\'s first $5M annual revenue milestone in 25 years through outcome-focused IT and cybersecurity sales.',
-      'Built an automated RPA pipeline (Power Platform) that cut lead generation time by 40%.',
-      'Presented IT and cybersecurity solutions to C-suite stakeholders, aligning technical outcomes with compliance and risk requirements.',
-    ],
   },
   {
     company: 'Microsoft',
     title: 'Direct Sales & Success, Education & NPO',
     period: '2022 – 2023',
-    bullets: [
-      'Advised enterprise Education and NPO clients on M365 and Azure security, specializing in identity management and GRC alignment.',
-      'Designed strategic adoption plans that mapped technical security features to regulatory requirements.',
-    ],
   },
   {
     company: 'Blockchain Solutions',
     title: 'System Administrator & Founder',
     period: '2017 – 2022',
-    bullets: [
-      'Built and managed distributed compute infrastructure (~44 GPUs, 7 rigs) with custom monitoring tooling, automated alerts, and remote management.',
-    ],
   },
 ];
 
@@ -391,7 +373,7 @@ export const chatResponses: ChatResponse[] = [
       'communicate',
     ],
     response:
-      "My reports are built for two audiences: the technical team that needs to fix the issue, and the executive who needs to fund the fix. Every finding includes a clear business risk statement, not just 'SQL injection found,' but 'Unauthenticated access to customer PII affecting N records, estimated remediation cost vs. breach liability.' I've presented to C-suite stakeholders at enterprise tech companies. I know what makes someone approve a budget line item.",
+      "My reports are built for two audiences: the technical team that needs to fix the issue, and the executive who needs to fund the fix. Every finding includes a clear business risk statement, not just 'SQL injection found,' but 'Unauthenticated access to customer PII affecting N records, estimated remediation cost vs. breach liability.' My background at companies like Microsoft means I know what makes someone approve a budget line item.",
     followUp: 'Want to hear about my business background?',
   },
   {
@@ -405,7 +387,7 @@ export const chatResponses: ChatResponse[] = [
       'value',
     ],
     response:
-      "Three things separate me from a typical candidate: First, I understand business operations. I've run companies, managed P&L, and presented to executives. My findings come with business context, not just technical jargon. Second, I'm hardware-capable. Physical access testing, RF analysis, badge cloning. Most pentesters never touch physical. Third, I build and maintain my own tooling and engagement infrastructure, from custom exploit development and automated recon pipelines to a deployment-ready toolkit covering every phase of an assessment. I understand the attack chain because I've implemented both sides of it.",
+      "Three things separate me from a typical candidate: First, I have a business operations background — I've worked at Microsoft, Apex Digital Solutions, and Knight Watch. My findings come with business context, not just technical jargon. Second, I'm hardware-capable. Physical access testing, RF analysis, badge cloning. Most pentesters never touch physical. Third, I build and maintain my own tooling and engagement infrastructure. I understand the attack chain because I've implemented both sides of it.",
     followUp: 'Want to discuss my methodology or availability?',
   },
   {
@@ -419,7 +401,7 @@ export const chatResponses: ChatResponse[] = [
       'business',
     ],
     response:
-      "Security is where I started. I was building tools and doing security research before I was old enough to drive. The business and sales years weren't a detour, they were additional training. I learned how organizations actually make decisions, how budgets get approved, and what risk means when you're the one signing the checks. That perspective is rare in this field and it directly improves the quality of every engagement I deliver.",
+      "Security is where I started. I was building tools and doing security research before I was old enough to drive. The business years at Microsoft, Apex Digital Solutions, and Knight Watch weren't a detour — they were additional training. That perspective is rare in this field and it directly improves the quality of every engagement I deliver.",
     followUp: 'Want to see how that translates to my reporting approach?',
   },
   {
@@ -432,7 +414,7 @@ export const chatResponses: ChatResponse[] = [
       'work history',
     ],
     response:
-      "20+ years in technology. I started building computers and writing code before middle school. I've run businesses in heavily regulated industries, managed distributed infrastructure, worked enterprise sales at Microsoft, and helped an MSP break their first $5M revenue milestone in 25 years. The last 4+ years have been dedicated entirely to offensive security, not as a career change, but as a return to where I started. The business experience is the bonus, not the foundation.",
+      "20+ years in technology. I started building computers and writing code before middle school. I've worked at Microsoft, Apex Digital Solutions, Knight Watch, and Blockchain Solutions across enterprise sales, business operations, and infrastructure. The last 4+ years have been dedicated entirely to offensive security, not as a career change, but as a return to where I started. The business experience is the bonus, not the foundation.",
     followUp: 'Want to know about my security methodology?',
   },
   {
@@ -489,7 +471,7 @@ export const chatResponses: ChatResponse[] = [
       'manage',
     ],
     response:
-      "I've managed teams, reported to executives, and worked independently across every role I've held. I adapt to the organization. In structured environments, I follow the playbook and contribute improvements through the right channels. In leaner teams, I'm self-directed. I'll scope, execute, and deliver without needing oversight. The business background means I understand deadlines, client expectations, and the reality that security work exists within a commercial context.",
+      "I adapt to the organization. In structured environments, I follow the playbook and contribute improvements through the right channels. In leaner teams, I'm self-directed. I'll scope, execute, and deliver without needing oversight. My time at Microsoft, Apex Digital Solutions, and Knight Watch means I understand deadlines, client expectations, and the reality that security work exists within a commercial context.",
     followUp: 'Want to know about my availability or methodology?',
   },
   {
@@ -503,7 +485,7 @@ export const chatResponses: ChatResponse[] = [
       'qualified',
     ],
     response:
-      "PJPT certified through TCM Security, with PNPT and BSCP (PortSwigger) actively in progress and OSCP planned. I also hold Microsoft fundamentals (AZ-900, SC-900, MS-900, PL-900) from my enterprise sales role. But the more meaningful proof is the practical record: top 1% on HTB Academy, global rank #902 in HTB Labs, and 500+ targets across realistic enterprise scenarios.",
+      "PJPT certified through TCM Security, with PNPT and BSCP (PortSwigger) actively in progress and OSCP planned. I also hold Microsoft fundamentals (AZ-900, SC-900, MS-900, PL-900). But the more meaningful proof is the practical record: top 1% on HTB Academy, global rank #902 in HTB Labs, and 500+ targets across realistic enterprise scenarios.",
     followUp: 'Want to see my project work or engagement methodology?',
   },
   {
