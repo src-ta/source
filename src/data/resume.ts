@@ -6,25 +6,25 @@ export const profile = {
   linkedin: 'https://linkedin.com/in/jason-e-terry',
   github: 'https://github.com/loudmumble',
   research: 'https://loudmumble.com',
-  tagline: ['Security Researcher', 'Penetration Tester', '20+ Years in Tech', 'HTB Top 1%'],
+  tagline: ['Security Researcher', 'Penetration Tester', 'Offensive Tool Developer', 'HTB Top 1%'],
   subTagline:
     'Offensive security operator with enterprise experience and a builder\'s mindset.',
   heroStats: [
     { label: 'HTB Academy', value: 'Top 1%' },
     { label: 'HTB Global Rank', value: '#902' },
-    { label: 'Targets Compromised', value: '500+' },
-    { label: 'Years in Tech', value: '20+' },
+    { label: 'Targets Compromised', value: '490' },
+    { label: 'Security Tools Built', value: '35+' },
   ],
 } as const;
 
 export const summary = {
   short:
-    'Penetration tester and security researcher with 20+ years in technology, including enterprise sales, business operations, and dedicated offensive security training.',
-  long: `Offensive security is where I started and where I've returned with over 20 years of technology experience behind me. I don't just run tools. I build them. Custom adversary simulation frameworks, behavioral intrusion detection systems, automated recon pipelines, and a full security operations platform built around my own engagement workflow.
+    'Penetration tester, security researcher, and offensive tool developer. I build end-to-end security tooling — from recon and exploitation to C2 and detection.',
+  long: `I don't just run tools. I build them. ADCS exploitation frameworks, adversary simulation, behavioral intrusion detection, encrypted tunneling, C2 infrastructure — end-to-end across the engagement lifecycle. Select tools open sourced on GitHub.
 
-Between then and now, I worked at Microsoft, Apex Digital Solutions, Knight Watch, and Blockchain Solutions across enterprise sales, business operations, and infrastructure. That experience gave me a perspective most pentesters don't have — I understand how organizations make decisions and what makes findings actionable.
+Between building tools, I worked at Microsoft, Apex Digital Solutions, Knight Watch, and Blockchain Solutions across enterprise sales, business operations, and infrastructure. That experience gave me a perspective most pentesters don't have — I understand how organizations make decisions and what makes findings actionable.
 
-I bring that full range to every engagement. Network penetration testing, web and API security, wireless auditing, physical access assessment, backed by a top 1% rank on HackTheBox Academy, 500+ compromised targets, and reports written for the people who approve the remediation budget, not just the team that implements it.`,
+Top 1% rank on HackTheBox Academy, global rank #902, 490 targets compromised. Completed CPTS and CWES job role paths.`,
   pivotQuestion:
     'Why does my business background matter in security?',
   pivotAnswer:
@@ -46,7 +46,7 @@ export const skills: Skill[] = [
   { name: 'IoT/Hardware Security', category: 'Offensive', level: 75 },
   { name: 'Offensive Tool Development', category: 'Offensive', level: 70 },
   { name: 'AI/LLM Red Teaming', category: 'Offensive', level: 70 },
-  { name: 'Physical Security', category: 'Offensive', level: 65 },
+  { name: 'ADCS/PKI Exploitation', category: 'Offensive', level: 75 },
   { name: 'Binary Exploitation', category: 'Offensive', level: 60 },
   { name: 'Reverse Engineering', category: 'Offensive', level: 60 },
   { name: 'Bash', category: 'Languages', level: 85 },
@@ -94,7 +94,6 @@ export const frameworks = [
   'NIST 800-53',
   'ISO 27001',
   'PCI-DSS',
-  'GDPR',
 ];
 
 export const extendedTools = [
@@ -163,6 +162,20 @@ export const projects: Project[] = [
       '9 known LLM model behavioral profiles',
       '9 behavioral detection rules (AEGIS-001 through AEGIS-009)',
       '190 tests passing with full coverage',
+    ],
+    status: 'Active Development',
+  },
+  {
+    title: 'CertStrike',
+    subtitle: 'ADCS Exploitation Framework',
+    description:
+      'ADCS exploitation framework covering ESC1-14 with shadow credentials, golden certificate forging, and integrated cert-auth C2.',
+    tech: ['Go', 'LDAP', 'X.509', 'Kerberos'],
+    highlights: [
+      'ESC1-14 detection and exploitation with dedicated Scan/Exploit functions',
+      'Auto-pwn orchestration across all ESC paths',
+      'Cert-auth C2 with file delivery and deploy',
+      'SmartPotato privilege escalation implant',
     ],
     status: 'Active Development',
   },
@@ -272,7 +285,6 @@ export const certifications: Certification[] = [
   { name: 'PL-900', issuer: 'Microsoft', status: 'earned' },
   { name: 'PNPT', issuer: 'TCM Security', status: 'in-progress' },
   { name: 'BSCP', issuer: 'PortSwigger', status: 'in-progress' },
-  { name: 'OSCP', issuer: 'OffSec', status: 'planned' },
 ];
 
 export interface TrainingPlatform {
@@ -285,7 +297,7 @@ export const training: TrainingPlatform[] = [
   {
     name: 'HackTheBox Academy',
     achievement: 'Top 1%',
-    detail: '500+ targets across CPTS, CWES, and AI Red Teamer paths',
+    detail: '490 targets compromised. Completed CPTS and CWES job role paths; AI Red Teamer in progress',
   },
   {
     name: 'HackTheBox Labs',
@@ -414,7 +426,7 @@ export const chatResponses: ChatResponse[] = [
       'work history',
     ],
     response:
-      "20+ years in technology. I started building computers and writing code before middle school. I've worked at Microsoft, Apex Digital Solutions, Knight Watch, and Blockchain Solutions across enterprise sales, business operations, and infrastructure. The last 4+ years have been dedicated entirely to offensive security, not as a career change, but as a return to where I started. The business experience is the bonus, not the foundation.",
+      "Security is where I started and where I've always been. I've worked at Microsoft, Apex Digital Solutions, Knight Watch, and Blockchain Solutions across enterprise sales, business operations, and infrastructure. Those roles gave me perspective, but the security work never stopped. I build end-to-end offensive tooling — from exploitation frameworks and C2 to behavioral detection and encrypted tunneling.",
     followUp: 'Want to know about my security methodology?',
   },
   {
@@ -485,7 +497,7 @@ export const chatResponses: ChatResponse[] = [
       'qualified',
     ],
     response:
-      "PJPT certified through TCM Security, with PNPT and BSCP (PortSwigger) actively in progress and OSCP planned. I also hold Microsoft fundamentals (AZ-900, SC-900, MS-900, PL-900). But the more meaningful proof is the practical record: top 1% on HTB Academy, global rank #902 in HTB Labs, and 500+ targets across realistic enterprise scenarios.",
+      "PJPT certified through TCM Security, with PNPT and BSCP (PortSwigger) actively in progress. I also hold Microsoft AZ-900 and SC-900. But the more meaningful proof is the practical record: top 1% on HTB Academy, global rank #902 in HTB Labs, 490 targets compromised, and completed CPTS and CWES job role paths.",
     followUp: 'Want to see my project work or engagement methodology?',
   },
   {
