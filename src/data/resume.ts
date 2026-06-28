@@ -13,7 +13,7 @@ export const profile = {
     { label: 'HTB Academy', value: 'Top 1%' },
     { label: 'HTB Global Rank', value: '#902' },
     { label: 'Targets Compromised', value: '490' },
-    { label: 'Security Tools Built', value: '35+' },
+    { label: 'Security Tools Built', value: '40+' },
   ],
 } as const;
 
@@ -54,7 +54,7 @@ export const skills: Skill[] = [
   { name: 'PowerShell', category: 'Languages', level: 73 },
   { name: 'C/C++', category: 'Languages', level: 70 },
   { name: 'JavaScript/TypeScript', category: 'Languages', level: 53 },
-  { name: 'Go', category: 'Languages', level: 53 },
+  { name: 'Go', category: 'Languages', level: 75 },
   { name: 'Zig', category: 'Languages', level: 40 },
   { name: 'C#/.NET', category: 'Languages', level: 40 },
   { name: 'SQL', category: 'Languages', level: 45 },
